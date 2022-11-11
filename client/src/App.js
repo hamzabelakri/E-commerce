@@ -1,17 +1,19 @@
 import "./App.css";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Home from "./Components/Home/Home";
-import Nav from "./Components/Navbar/Navbar";
+import CustomNavbar from "./Components/Navbar/Navbar";
 import ProductDetail from "./Components/ProductDetail/ProductDetail";
-import Cart from "./Components/Cart/Cart"
+import Cart from "./Components/Cart/Cart";
+import Register from "./Components/Register/Register"
 function App() {
   return (
     <BrowserRouter>
-      <Nav />
+      <CustomNavbar />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/product/:id" element={<ProductDetail />} /> 
-        <Route path="/Cart" element={<Cart />} /> 
+        <Route path="/cart" element={<Cart />} /> 
+        <Route path="/register" element={<Register />} /> 
       </Routes>
     </BrowserRouter>
   );

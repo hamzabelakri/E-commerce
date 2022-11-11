@@ -3,8 +3,9 @@ const app = express();
 const connect = require("./config/ConnectDb");
 require("dotenv").config({ path: "./config/.env" });
 const cors = require("cors");
+const authRouter = require("./Routes/authRouter")
 const productRouter = require("./Routes/productRouter");
-
+const userRoute= require('./Routes/userRoute')
 
 
 app.use(cors());
@@ -31,5 +32,6 @@ app.listen(process.env.PORT, () => {
 connect();
 
 
-
+app.use("/auth", authRouter)
 app.use("/product", productRouter);
+app.use('/users', userRoute)

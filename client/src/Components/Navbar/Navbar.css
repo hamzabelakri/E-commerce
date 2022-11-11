@@ -4,7 +4,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 1.5rem 1rem;
+    padding: 1.1rem 1rem;
     z-index: 50;
   }
   
@@ -96,4 +96,6 @@
     .navbar__logo h2 {
       font-size: 1rem;
     }
-  }
+  } 
+
+  

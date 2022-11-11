@@ -1,10 +1,13 @@
 import React from 'react'
 import {Link} from 'react-router-dom'
 import "./Navbar.css";
+import Container from 'react-bootstrap/Container';
+import Nav from 'react-bootstrap/Nav';
+import Navbar from 'react-bootstrap/Navbar';
 
-function Navbar() {
+function CustomNavbar() {
   return (
-    <nav className="navbar">
+<nav className="navbar">
     <div className="navbar__logo">
       <h2>My Store</h2>
     </div>
@@ -28,8 +31,10 @@ function Navbar() {
       <div></div>
       <div></div>
     </div>
-  </nav>
+  </nav> 
+
+
   )
 }
 
-export default Navbar
+export default CustomNavbar

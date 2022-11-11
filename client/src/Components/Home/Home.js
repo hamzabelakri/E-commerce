@@ -6,7 +6,7 @@ import ProductCard from "../ProductCard/ProductCard"
 
 function Home() {
   const state = useSelector((state) => state.ProductReducer);
-  console.log(state) 
+  console.log(state)  
 const dispatch = useDispatch();
   useEffect(() => {
     dispatch(getAllProducts());
