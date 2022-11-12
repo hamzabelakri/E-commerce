@@ -3,16 +3,19 @@ import Button from "react-bootstrap/Button";
 import Form from "react-bootstrap/Form";
 import { useDispatch } from "react-redux";
 import { postUser } from "../../Redux/Actions/userAction";
+import { useNavigate } from "react-router-dom";
 
 
 
 function Sign() {
   const dispatch = useDispatch();
+  const navigate = useNavigate();
+
   const [user, setUser] = useState({
     username: "",
     email: "",
-    password: "",
-    countInStock:"",
+    password: ""
+   
   });
   const handleChange = (event) => {
     setUser({ ...user, [event.target.name]: event.target.value });
@@ -20,8 +23,8 @@ function Sign() {
   };
   const onSubmit = (event) => {
     event.preventDefault();
-    dispatch(postUser(user));
-    setUser({ username: "", email: "", password: "", countInStock:"" });
+    dispatch(postUser(user, navigate));
+    setUser({ username: "", email: "", password: "" });
    
   };
 

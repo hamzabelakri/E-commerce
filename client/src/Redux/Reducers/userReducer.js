@@ -1,8 +1,10 @@
-import { Register } from "../Types";
+import { Register, Login } from "../Types";
 const initState = { users: [], user: {} };
 const userReducer = (state = initState, action) => {
   switch (action.type) {
     case Register:
+      return { ...state, users: [...action.payload] };
+      case Login:
       return { ...state, users: [...action.payload] };
 
     default:
