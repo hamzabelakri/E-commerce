@@ -3,10 +3,9 @@ const app = express();
 const connect = require("./config/ConnectDb");
 require("dotenv").config({ path: "./config/.env" });
 const cors = require("cors");
-const authRouter = require("./Routes/authRouter")
+const authRouter = require("./Routes/authRouter");
 const productRouter = require("./Routes/productRouter");
-const userRoute= require('./Routes/userRoute')
-
+const userRoute = require("./Routes/userRoute");
 
 app.use(cors());
 app.use(express.json());
@@ -23,15 +22,12 @@ app.use((req, res, next) => {
   next();
 });
 
-
 app.listen(process.env.PORT, () => {
   console.log(`server is running on port ${process.env.PORT}`);
 });
 
-
 connect();
 
-
-app.use("/auth", authRouter)
+app.use("/auth", authRouter);
 app.use("/product", productRouter);
-app.use('/users', userRoute)
+app.use("/users", userRoute);

@@ -7,4 +7,4 @@ const connectDb = async () => {
     console.log("connected to db is failed");
   }
 };
-module.exports =connectDb
+module.exports = connectDb;
