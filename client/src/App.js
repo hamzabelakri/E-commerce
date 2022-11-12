@@ -4,10 +4,12 @@ import Home from "./Components/Home/Home";
 import CustomNavbar from "./Components/Navbar/Navbar";
 import ProductDetail from "./Components/ProductDetail/ProductDetail";
 import Cart from "./Components/Cart/Cart";
-import Register from "./Components/Register/Register";
-import Login from "./Components/Login/Login";
+import Register from "./Components/Auth/Register";
+import Login from "./Components/Auth/Login";
 import Profile from "./Components/Profile/Profile";
 import Admin from "./Components/Admin/Admin";
+import UserCard from "./Components/Profile/UserCard";
+import UserDetails from "./Components/Profile/UserDetails"
 function App() {
   return (
     <BrowserRouter>
@@ -20,7 +22,8 @@ function App() {
         <Route path="/login" element={<Login />} /> 
         <Route path="/profile" element={<Profile />} /> 
         <Route path="/admin" element={<Admin />} /> 
-
+        <Route path="/usercard" element={<UserCard />} /> 
+        <Route path="/user/:id" element={<UserDetails />} /> 
       </Routes>
     </BrowserRouter>
   );
