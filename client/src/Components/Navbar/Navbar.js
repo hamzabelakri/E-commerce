@@ -11,7 +11,7 @@ function CustomNavbar() {
     <div className="navbar__logo">
     <Link to="/">
       <h2>My Store</h2>
-      </Link>
+      </Link>     
     </div>
 
     <ul className="navbar__links">
@@ -23,6 +23,7 @@ function CustomNavbar() {
           </span>
         </Link>
       </li>
+      
    
     </ul>
 

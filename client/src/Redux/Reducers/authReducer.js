@@ -3,9 +3,9 @@ const initState = { users: [], user: {} };
 const authReducer = (state = initState, action) => {
   switch (action.type) {
     case Register:
-      return { ...state, users: action.payload };
+      return { ...state, user: action.payload.user };
       case Login:
-      return { ...state, users: action.payload };
+      return { ...state, user: action.payload.user };
      
 
     default:

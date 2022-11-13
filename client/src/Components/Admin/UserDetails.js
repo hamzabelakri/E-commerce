@@ -7,9 +7,11 @@ import Form from 'react-bootstrap/Form';
 import {updateUser} from "../../Redux/Actions/userAction";
 import {deleteUser} from "../../Redux/Actions/userAction";
 
-function UserDetails({ elt }) {
+function UserDetails() {
   const dispatch = useDispatch();
   const state = useSelector((state) => state.userReducer);
+  console.log(state);
+
   const [newUser, setNewUser]= useState({ username:"",email: "", password: ""})
   const handleChange=(event)=>{
     setNewUser({...newUser, [event.target.name]: event.target.value})

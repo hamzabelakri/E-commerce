@@ -1,5 +1,6 @@
 //// products
 export const GET_ALL_PRODUCTS = "GET_ALL_PRODUCTS";
+export const GET_ONE_PRODUCT = "GET_ONE_PRODUCT";
 //// auth
 export const Register = "Register";
 export const Login = "Login";

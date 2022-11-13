@@ -1,6 +1,12 @@
 import React from 'react'
 import "./ProductDetail.css"
+import { useSelector, useDispatch } from "react-redux";
+
 function ProductDetail() {
+
+  const state= useSelector((state) => state.productReducer)
+  console.log(state.product);
+
   return (
     <div className="productscreen">
     
@@ -11,7 +17,7 @@ function ProductDetail() {
           <div className="left__info">
             <p className="left__name"></p>
             <p>Price: $</p>
-            <p>Description: </p>
+            <p>description</p>
           </div>
         </div>
         <div className="productscreen__right">
