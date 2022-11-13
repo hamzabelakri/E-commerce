@@ -14,12 +14,13 @@ function Login() {
   };
 
   const onSubmit = (event) => {
-    dispatch(signIn(user), navigate);
+    dispatch(signIn(user, navigate));
     event.preventDefault();
     setUser({ email: "", password: "" });
   };
   return (
     <Form onSubmit={onSubmit}>
+      <h2>Login</h2>
       <Form.Group className="mb-3" controlId="formBasicEmail">
         <Form.Label>Email address</Form.Label>
         <Form.Control

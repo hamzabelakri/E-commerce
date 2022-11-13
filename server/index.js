@@ -6,6 +6,8 @@ const cors = require("cors");
 const authRouter = require("./Routes/authRouter");
 const productRouter = require("./Routes/productRouter");
 const userRoute = require("./Routes/userRoute");
+const messageRouter=require('./Routes/messageRoute');
+
 
 app.use(cors());
 app.use(express.json());
@@ -31,3 +33,4 @@ connect();
 app.use("/auth", authRouter);
 app.use("/product", productRouter);
 app.use("/users", userRoute);
+app.use('/message',messageRouter)

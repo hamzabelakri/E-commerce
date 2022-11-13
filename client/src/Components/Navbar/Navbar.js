@@ -9,7 +9,9 @@ function CustomNavbar() {
   return (
 <nav className="navbar">
     <div className="navbar__logo">
+    <Link to="/">
       <h2>My Store</h2>
+      </Link>
     </div>
 
     <ul className="navbar__links">
@@ -21,9 +23,7 @@ function CustomNavbar() {
           </span>
         </Link>
       </li>
-      <li>
-        <Link to="/">Shop</Link>
-      </li>
+   
     </ul>
 
     <div className="hamburger__menu">

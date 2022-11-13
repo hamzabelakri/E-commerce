@@ -2,11 +2,11 @@ import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { getAllUsers } from "../../Redux/Actions/userAction";
 import UserCard from "./UserCard";
-import Spinner from "react-bootstrap/Spinner";
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
+import {getAllProducts} from "../../Redux/Actions/productAction";
 
-function Profile() {
+function AdminProfile() {
   const state = useSelector((state) => state.userReducer);
   const [input, setInput]= useState("")
 
@@ -24,10 +24,11 @@ const handleChange=(event)=> {
 const onClick= (event) => {
   dispatch(getAllUsers());
 }
+
   return (
 <>
 <h2 style={{textDecoration : "underline", cursor: "pointer"}} onClick={onClick}>USERS</h2>
-<h2 style={{textDecoration : "underline", cursor: "pointer"}}>Products</h2>
+<h2 style={{textDecoration : "underline", cursor: "pointer"}} >Products</h2>
     <Form style={{display: "flex", justifyContent: "center"}}>
       <Form.Group className="mb-3" controlId="formBasicEmail">
         <Form.Label>search a user</Form.Label>
@@ -46,8 +47,9 @@ const onClick= (event) => {
         .map((elt) => <UserCard key={elt._id} elt={elt} />)
       }
       </div>
+      
    </>
   );
 }
 
-export default Profile;
+export default AdminProfile;

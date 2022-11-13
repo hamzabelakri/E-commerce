@@ -5,10 +5,19 @@ const getAllProducts = async (req, res) => {
     const products = await Product.find();
     res.json(products);
   } catch (error) {
-    res.json({ msg: "failed to get product" });
+    res.json({ msg: "failed to get all products" });
   }
 };
 
+const getOneProduct = async (req, res) => {
+  try {
+    const id = req.params.id;
+    const product = await Product.findById(id);
+    res.json({ product });
+  } catch (error) {
+    res.json({ msg: "failed to get product" });
+  }
+};
 const addProduct = async (req, res) => {
   try {
     const productInfo = req.body;
@@ -50,15 +59,7 @@ const deleteProduct = async (req, res) => {
   }
 };
 
-const getOneProduct = async (req, res) => {
-  try {
-    const id = req.params.id;
-    const product = await Product.findById(id);
-    res.json({ product });
-  } catch (error) {
-    res.json({ msg: "failed to get product" });
-  }
-};
+
 
 module.exports = {
   getAllProducts,

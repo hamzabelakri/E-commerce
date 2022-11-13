@@ -6,10 +6,10 @@ import ProductDetail from "./Components/ProductDetail/ProductDetail";
 import Cart from "./Components/Cart/Cart";
 import Register from "./Components/Auth/Register";
 import Login from "./Components/Auth/Login";
-import Profile from "./Components/Profile/Profile";
-import Admin from "./Components/Admin/Admin";
-import UserCard from "./Components/Profile/UserCard";
-import UserDetails from "./Components/Profile/UserDetails"
+import AdminProfile from "./Components/Admin/AdminProfile";
+import UserProfile from "./Components/UserProfile/UserProfile";
+import UserCard from "./Components/Admin/UserCard";
+import UserDetails from "./Components/Admin/UserDetails"
 function App() {
   return (
     <BrowserRouter>
@@ -20,8 +20,8 @@ function App() {
         <Route path="/cart" element={<Cart />} /> 
         <Route path="/register" element={<Register />} /> 
         <Route path="/login" element={<Login />} /> 
-        <Route path="/profile" element={<Profile />} /> 
-        <Route path="/admin" element={<Admin />} /> 
+        <Route path="/admin" element={<AdminProfile />} /> 
+        <Route path="/profile" element={<UserProfile />} /> 
         <Route path="/usercard" element={<UserCard />} /> 
         <Route path="/user/:id" element={<UserDetails />} /> 
       </Routes>

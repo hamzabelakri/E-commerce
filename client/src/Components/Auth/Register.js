@@ -20,12 +20,13 @@ function Sign() {
   const onSubmit = (event) => {
     event.preventDefault();
     dispatch(postUser(user, navigate));
+
     setUser({ username: "", email: "", password: "" });
   };
 
   return (
     <Form onSubmit={onSubmit}>
-      <Form.Group className="mb-3" controlId="formBasicEmail">
+      <Form.Group className="mb-3">
         <Form.Label>username</Form.Label>
         <Form.Control
           onChange={handleChange}
