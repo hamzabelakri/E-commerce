@@ -11,7 +11,8 @@ function UserCard({ elt }) {
     dispatch(getOneUser(elt._id, navigate));
   };
   return (
-    <Card style={{ width: "18rem" }}>
+    <div style={{display: "flex", justifyContent: "center"}}>
+    <Card style={{ width: "18rem" }}> 
       <Card.Body>
         <Card.Title>{elt.username}</Card.Title>
 
@@ -20,6 +21,7 @@ function UserCard({ elt }) {
         </Card.Link>
       </Card.Body>
     </Card>
+    </div>
   );
 }
 

@@ -12,16 +12,23 @@ function Profile() {
 
   const dispatch = useDispatch();
 
-  useEffect(() => {
+/*   useEffect(() => {
     dispatch(getAllUsers());
-  }, [dispatch]);
+  }, [dispatch]); */
+
 const handleChange=(event)=> {
   setInput(event.target.value)
   console.log(input)
 }
+
+const onClick= (event) => {
+  dispatch(getAllUsers());
+}
   return (
 <>
-    <Form>
+<h2 style={{textDecoration : "underline", cursor: "pointer"}} onClick={onClick}>USERS</h2>
+<h2 style={{textDecoration : "underline", cursor: "pointer"}}>Products</h2>
+    <Form style={{display: "flex", justifyContent: "center"}}>
       <Form.Group className="mb-3" controlId="formBasicEmail">
         <Form.Label>search a user</Form.Label>
         <Form.Control type="email" placeholder="Enter email" onChange={handleChange} />
@@ -32,14 +39,13 @@ const handleChange=(event)=> {
         Search
       </Button>
     </Form>
-    
-      {state.users.length === 0 ? (
-        <Spinner animation="border" variant="success" />
-      ) : (
+    <div>
+      {
         state.users.filter((user)=>user.username.toLowerCase().includes(input.toLocaleLowerCase()))
         
         .map((elt) => <UserCard key={elt._id} elt={elt} />)
-      )}
+      }
+      </div>
    </>
   );
 }
