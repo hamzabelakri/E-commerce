@@ -40,12 +40,12 @@ export const updateUser=(id, newUser) => async (dispatch)=>{
   }
 }
 
-export const deleteUser = (id) => async (dispatch) => {
+export const deleteUser = (id, navigate) => async (dispatch) => {
   try {
     const response = await axios.delete(`http://localhost:5000/users/${id}`)
     
     dispatch({ type:DELETE_USER})
-   
+    navigate('/admin')
     console.log(response.data)
   } catch (error) {
     console.log(error)

@@ -12,9 +12,16 @@ function UserDetails() {
   const dispatch = useDispatch();
   const navigate = useNavigate();
   const state = useSelector((state) => state.userReducer);
-  console.log(state);
+ 
+
 
   const [newUser, setNewUser]= useState({ username:"",email: "", password: ""})
+
+  const [show, setShow]= useState(false)
+  const handleShow =(event)=> {
+    show? setShow(false) : setShow(true)
+  }
+
   const handleChange=(event)=>{
     setNewUser({...newUser, [event.target.name]: event.target.value})
     
@@ -27,8 +34,10 @@ dispatch(updateUser(state.user._id, newUser))
   }
 
   const handleDelete=(event)=> {
-    dispatch(deleteUser(state.user._id))
+    dispatch(deleteUser(state.user._id, navigate))
   }
+
+
 
   return (
     <>
@@ -39,12 +48,12 @@ dispatch(updateUser(state.user._id, newUser))
         <ListGroup.Item>{state.user.username}</ListGroup.Item>
         <ListGroup.Item>{state.user.email}</ListGroup.Item>
       </ListGroup>
-      <Button variant="success">update</Button>{' '}
+      <Button variant="success" onClick={handleShow}>update</Button>{' '}
       <Button variant="danger" onClick={handleDelete}>delete</Button>{' '}
     </Card>
 
 <div>
-    <Form >
+  {show&& <Form >
     <Form.Group className="mb-3" >
       <Form.Label>Username</Form.Label>
       <Form.Control type="text" placeholder="Enter a new userame" name="username" value={newUser.username} onChange={handleChange}/>
@@ -60,7 +69,8 @@ dispatch(updateUser(state.user._id, newUser))
     <Button variant="primary" type="submit" onClick={onClick}>
       Update
     </Button>
-  </Form>
+  </Form>}
+    
   </div>
   </>
   );
