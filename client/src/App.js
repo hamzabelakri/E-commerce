@@ -9,7 +9,8 @@ import Login from "./Components/Auth/Login";
 import AdminProfile from "./Components/Admin/AdminProfile";
 import UserProfile from "./Components/UserProfile/UserProfile";
 import UserCard from "./Components/Admin/UserCard";
-import UserDetails from "./Components/Admin/UserDetails"
+import UserDetails from "./Components/Admin/UserDetails";
+import PrivateRoute from "./Components/PrivateRoute/PrivateRoute";
 function App() {
   return (
     <BrowserRouter>

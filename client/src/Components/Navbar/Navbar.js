@@ -4,8 +4,18 @@ import "./Navbar.css";
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
+import {useSelector, useDispatch} from "react-redux";
+import { useNavigate } from 'react-router-dom';
+import {logOut} from '../../Redux/Actions/authAction'
 
 function CustomNavbar() {
+  const {connected}= useSelector((state) => state.authReducer)
+  const dispatch = useDispatch();
+  const navigate = useNavigate();
+  const handleDeconnect=(event)=> {
+    dispatch(logOut(navigate ))
+  }
+
   return (
 <nav className="navbar">
     <div className="navbar__logo">
@@ -24,7 +34,14 @@ function CustomNavbar() {
         </Link>
       </li>
       
-   
+      {connected && (
+            <div>
+              
+              <i onClick={handleDeconnect}>Log Out</i>
+             
+         
+              {/* <p style={{ color: "white" }}>{user && user.username}</p> */}
+            </div>)}
     </ul>
 
     <div className="hamburger__menu">

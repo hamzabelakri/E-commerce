@@ -4,27 +4,27 @@ import { useSelector, useDispatch } from "react-redux";
 
 function ProductDetail() {
 
-  const state= useSelector((state) => state.productReducer)
-  console.log(state.product);
+  const {product}= useSelector((state) => state.productReducer)
+  console.log(product);
 
   return (
     <div className="productscreen">
     
         <div className="productscreen__left">
           <div className="left__image">
-            <img alt="" />
+            <img alt="" src={product.imageUrl}/>
           </div>
           <div className="left__info">
             <p className="left__name"></p>
-            <p>Price: $</p>
-            <p>description</p>
+            <p>{product.name}</p>
+            <p>{product.description}</p>
           </div>
         </div>
         <div className="productscreen__right">
           <div className="right__info">
             <p>
               Price:
-              <span>$</span>
+              <span>{product.name}$</span>
             </p>
             <p>
               Status:

@@ -13,7 +13,7 @@ const getOneProduct = async (req, res) => {
   try {
     const id = req.params.id;
     const product = await Product.findById(id);
-    res.json({ product });
+    res.json( product );
   } catch (error) {
     res.json({ msg: "failed to get product" });
   }

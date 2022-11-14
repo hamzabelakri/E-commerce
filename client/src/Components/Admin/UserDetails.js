@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import Card from "react-bootstrap/Card";
 import ListGroup from "react-bootstrap/ListGroup";
 import { useSelector, useDispatch } from "react-redux";
+import {useNavigate} from 'react-router-dom'
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
 import {updateUser} from "../../Redux/Actions/userAction";
@@ -9,6 +10,7 @@ import {deleteUser} from "../../Redux/Actions/userAction";
 
 function UserDetails() {
   const dispatch = useDispatch();
+  const navigate = useNavigate();
   const state = useSelector((state) => state.userReducer);
   console.log(state);
 

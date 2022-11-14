@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import Button from "react-bootstrap/Button";
 import Form from "react-bootstrap/Form";
 import { useDispatch } from "react-redux";
-import { postUser } from "../../Redux/Actions/authAction";
+import { signUp } from "../../Redux/Actions/authAction";
 import { useNavigate } from "react-router-dom";
 
 function Sign() {
@@ -19,7 +19,7 @@ function Sign() {
   };
   const onSubmit = (event) => {
     event.preventDefault();
-    dispatch(postUser(user, navigate));
+    dispatch(signUp(user, navigate));
 
     setUser({ username: "", email: "", password: "" });
   };

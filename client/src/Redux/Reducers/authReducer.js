@@ -1,12 +1,15 @@
-import { Register, Login } from "../Types";
-const initState = { users: [], user: {} };
+import { REGISTER, LOGIN, LOG_OUT} from "../Types";
+const initState = { user: null, connected: false };
 const authReducer = (state = initState, action) => {
   switch (action.type) {
-    case Register:
-      return { ...state, user: action.payload.user };
-      case Login:
-      return { ...state, user: action.payload.user };
-     
+    case REGISTER :
+    case LOGIN:
+      localStorage.setItem("token", action.payload.token);
+      return { ...state, user: action.payload.user, connected: true };
+      case LOG_OUT:
+
+      localStorage.clear();
+      return { user: null, connected: false };
 
     default:
       return state;
