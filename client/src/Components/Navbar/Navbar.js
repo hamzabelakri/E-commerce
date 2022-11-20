@@ -74,7 +74,7 @@ function CustomNavbar() {
             class="flex items-center text-sm font-medium text-gray-700 hover:text-gray-800" 
           >
            <Link to="/landingpage">
-            About us
+            Home
             </Link>
           </a>
 
@@ -84,6 +84,14 @@ function CustomNavbar() {
           >
              <Link to="/">
             Products
+            </Link>
+          </a>
+          <a
+            href="#"
+            class="flex items-center text-sm font-medium text-gray-700 hover:text-gray-800"
+          >
+             <Link to="/">
+            Contact us
             </Link>
           </a>
           
@@ -96,7 +104,7 @@ function CustomNavbar() {
             href="#"            
 
             class="text-sm font-medium text-gray-700 hover:text-gray-800" 
-            onClick={handleDeconnect}>
+          onClick={handleDeconnect}>
             Log out 
           </a>):(
         

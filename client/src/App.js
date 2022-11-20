@@ -11,7 +11,8 @@ import UserProfile from "./Components/UserProfile/UserProfile";
 import UserCard from "./Components/Admin/UserCard";
 import UserDetails from "./Components/Admin/UserDetails";
 import PrivateRoute from "./Components/PrivateRoute/PrivateRoute";
-import LandingPage from "./Components/LandingPage/LandingPage"
+import LandingPage from "./Components/LandingPage/LandingPage";
+import Contact from "./Components/Contact/Contact";
 function App() {
   return (
     <BrowserRouter>
@@ -27,6 +28,7 @@ function App() {
         <Route path="/usercard" element={<UserCard />} /> 
         <Route path="/user/:id" element={<UserDetails />} /> 
         <Route path="landingpage" element={<LandingPage />} /> 
+        <Route path="contact" element={<Contact />} /> 
 
       </Routes>
     </BrowserRouter>

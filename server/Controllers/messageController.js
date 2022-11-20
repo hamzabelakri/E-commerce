@@ -12,9 +12,9 @@ const postMessage = async (req, res) => {
   try {
     const messageInfo = req.body;
     const newMessage = new Message({
-      Name: messageInfo.Name,
-      Email: messageInfo.Email,
-      Message: messageInfo.Message,
+      name: messageInfo.name,
+      email: messageInfo.email,
+      message: messageInfo.message,
     });
     await newMessage.save();
     res.status(201).json({ msg: "Message sent", newMessage});

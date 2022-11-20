@@ -1,15 +1,15 @@
 const mongoose = require("mongoose");
 const messageSchema = mongoose.Schema({
-  Name: {
+  name: {
     type: String,
     required: true,
   },
-  Email: {
+  email: {
     type: String,
     required: true,
   },
 
-  Message: {
+  message: {
     type: String,
     required: true,
   },

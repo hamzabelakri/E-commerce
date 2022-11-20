@@ -27,7 +27,7 @@ function Sign() {
   return (
 
 
-<div class="flex min-h-full items-center justify-center py-12 px-4 sm:px-6 lg:px-8">
+<div class="flex min-h-full items-center justify-center py-12 px-4 sm:px-6 lg:px-8" onSubmit={onSubmit}>
   <div class="w-full max-w-md space-y-8">
     <div>
       <img class="mx-auto h-12 w-auto" src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=600" alt="Your Company"/>
@@ -40,16 +40,16 @@ function Sign() {
       <input type="hidden" name="remember" value="true"/>
       <div class="-space-y-px rounded-md shadow-sm">
       <div>
-          <label for="username" class="sr-only">Username</label>
-          <input id="username" name="username" type="username" autocomplete="username" required class="relative block w-full appearance-none rounded-none rounded-t-md border border-gray-300 px-3 py-2 text-gray-900 placeholder-gray-500 focus:z-10 focus:border-indigo-500 focus:outline-none focus:ring-indigo-500 sm:text-sm" placeholder="Email username"/>
+          <label for="username" >Username</label>
+          <input id="username" name="username" value={user.username} type="username" autocomplete="username" required class="relative block w-full appearance-none rounded-none rounded-t-md border border-gray-300 px-3 py-2 text-gray-900 placeholder-gray-500 focus:z-10 focus:border-indigo-500 focus:outline-none focus:ring-indigo-500 sm:text-sm" placeholder="Email username" onChange={handleChange}/>
         </div>
         <div>
-          <label for="email-address" class="sr-only">Email address</label>
-          <input id="email-address" name="email" type="email" autocomplete="email" required class="relative block w-full appearance-none rounded-none rounded-t-md border border-gray-300 px-3 py-2 text-gray-900 placeholder-gray-500 focus:z-10 focus:border-indigo-500 focus:outline-none focus:ring-indigo-500 sm:text-sm" placeholder="Email address"/>
+          <label for="email-address" >Email address</label>
+          <input id="email-address" name="email" type="email" value={user.email} autocomplete="email" required class="relative block w-full appearance-none rounded-none rounded-t-md border border-gray-300 px-3 py-2 text-gray-900 placeholder-gray-500 focus:z-10 focus:border-indigo-500 focus:outline-none focus:ring-indigo-500 sm:text-sm" placeholder="Email address" onChange={handleChange}/>
         </div>
         <div>
-          <label for="password" class="sr-only">Password</label>
-          <input id="password" name="password" type="password" autocomplete="current-password" required class="relative block w-full appearance-none rounded-none rounded-b-md border border-gray-300 px-3 py-2 text-gray-900 placeholder-gray-500 focus:z-10 focus:border-indigo-500 focus:outline-none focus:ring-indigo-500 sm:text-sm" placeholder="Enter password"/>
+          <label for="password" >Password</label>
+          <input id="password" name="password" type="password" value={user.password} autocomplete="current-password" required class="relative block w-full appearance-none rounded-none rounded-b-md border border-gray-300 px-3 py-2 text-gray-900 placeholder-gray-500 focus:z-10 focus:border-indigo-500 focus:outline-none focus:ring-indigo-500 sm:text-sm" placeholder="Enter password" onChange={handleChange}/>
         </div>
       </div>
 
