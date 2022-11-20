@@ -90,7 +90,7 @@ function CustomNavbar() {
             href="#"
             class="flex items-center text-sm font-medium text-gray-700 hover:text-gray-800"
           >
-             <Link to="/">
+             <Link to="/contact">
             Contact us
             </Link>
           </a>

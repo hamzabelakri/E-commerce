@@ -14,7 +14,7 @@ function ProductCard({elt}) {
   const handleClick = (event) => {
     
     dispatch(getOneProduct(elt._id, navigate));
-    show? setShow(false): setShow(true)
+    /* show? setShow(false): setShow(true) */
   };
   return (
     /* <Card style={{ width: '18rem' }}>

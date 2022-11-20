@@ -10,7 +10,8 @@ const handleChange = (event) => {
 }
 
 const onClick = (event) => {
-dispatch(sendMessage(message))
+dispatch(sendMessage(message));
+setMessage({name:'',email:"",message:''});
 event.preventDefault();
 }
   return (
