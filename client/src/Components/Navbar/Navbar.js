@@ -92,25 +92,24 @@ function CustomNavbar() {
 
       <div class="ml-auto flex items-center">
         <div class="hidden lg:flex lg:flex-1 lg:items-center lg:justify-end lg:space-x-6">
+        {connected ? (<a
+            href="#"            
+
+            class="text-sm font-medium text-gray-700 hover:text-gray-800" 
+            onClick={handleDeconnect}>
+            Log out 
+          </a>):(
+        
           <a
             href="#"            
 
             class="text-sm font-medium text-gray-700 hover:text-gray-800" 
           >
           <Link to="/login">  Sign in </Link>
-          </a>
+          </a>)}
+          
           <span class="h-6 w-px bg-gray-200" aria-hidden="true"></span>
-        {/* {show? (<a
-            href="#"
-            class="text-sm font-medium text-gray-700 hover:text-gray-800"
-          >
-            Create account
-          </a>):(<a
-            href="#"
-            class="text-sm font-medium text-gray-700 hover:text-red-800"
-          >
-            Log out
-          </a>)}   */}
+       
         </div>
 
         <div class="ml-4 flow-root lg:ml-6">

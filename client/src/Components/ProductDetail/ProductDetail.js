@@ -2,9 +2,14 @@ import React from "react";
 import "./ProductDetail.css";
 import { useSelector, useDispatch } from "react-redux";
 
-function ProductDetail() {
+function ProductDetail({setShow}) {
   const { product } = useSelector((state) => state.productReducer);
   console.log(product);
+
+  const handleShow = (event) => {
+    setShow(false)
+
+  };
 
   return (
    /*  <div className="productscreen">
@@ -51,7 +56,7 @@ function ProductDetail() {
               <button
                 type="button"
                 class="absolute top-4 right-4 text-gray-400 hover:text-gray-500 sm:top-8 sm:right-6 md:top-6 md:right-6 lg:top-8 lg:right-8"
-              >
+                onClick={handleShow} >
                 <span class="sr-only">Close</span>
                 <svg
                   class="h-6 w-6"
@@ -74,7 +79,7 @@ function ProductDetail() {
                   <img
                     src={product.imageUrl}
                     alt="Two each of gray, white, and black shirts arranged on table."
-                    class="object-cover object-center"
+                    class="object-cover object-center" 
                   />
                 </div>
                 <div class="sm:col-span-8 lg:col-span-7">
@@ -83,7 +88,7 @@ function ProductDetail() {
                   </h2>
                   <section aria-labelledby="information-heading" class="mt-2">
                   <p class="text-2xl text-gray-900">{product.description}</p>
-                    <p class="text-2xl text-gray-900">$192</p>
+                    <p class="text-2xl text-gray-900">${product.price}</p>
                    
                   </section>
                   <section aria-labelledby="options-heading" class="mt-10">
@@ -94,7 +99,7 @@ function ProductDetail() {
                       <button
                         type="submit"
                         class="mt-6 flex w-full items-center justify-center rounded-md border border-transparent bg-indigo-600 py-3 px-8 text-base font-medium text-white hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2"
-                      >
+                        >
                         Add to cart
                       </button>
                     </form>
