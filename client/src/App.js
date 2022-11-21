@@ -13,6 +13,7 @@ import UserDetails from "./Components/Admin/UserDetails";
 import PrivateRoute from "./Components/PrivateRoute/PrivateRoute";
 import LandingPage from "./Components/LandingPage/LandingPage";
 import Contact from "./Components/Contact/Contact";
+import Footer from "./Components/Footer/Footer"
 function App() {
   return (
     <BrowserRouter>
@@ -31,6 +32,7 @@ function App() {
         <Route path="contact" element={<Contact />} /> 
 
       </Routes>
+      <Footer/>
     </BrowserRouter>
   );
 }
