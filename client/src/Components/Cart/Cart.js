@@ -70,8 +70,8 @@ function Cart() {
         <div class="mt-10 bg-gray-50 px-4 pt-8 lg:mt-0">
           <div class="mt-6  border-b py-2">
             <div class="flex items-center justify-between">
-              <p class="text-sm font-medium text-gray-900">Subtotal</p>
-              <p class="font-semibold text-gray-900">$399.00</p>
+              <p class="text-base font-medium text-gray-900">Subtotal</p>
+              <p class="text-base font-medium text-gray-900">$399.00</p>
             </div>
             <div class="flex items-center justify-between">
               <p class="text-sm font-medium text-gray-900">Shipping</p>
@@ -79,8 +79,8 @@ function Cart() {
             </div>
           </div>
           <div class="mt-6 flex items-center justify-between">
-            <p class="text-sm font-medium text-gray-900">Total</p>
-            <p class="text-2xl font-semibold text-gray-900">$408.00</p>
+            <p class="text-lg font-bold text-gray-900">Total</p>
+            <p class="text-lg font-bold text-gray-900">$408.00</p>
           </div>
           <div class="mt-6 flex items-center ">
             <button class="mt-4 mb-8 w-full rounded-md border border-transparent bg-indigo-600 px-6 py-3 text-base font-medium text-white shadow-sm hover:bg-indigo-700">
