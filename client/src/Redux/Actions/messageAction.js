@@ -17,11 +17,11 @@ export const sendMessage = (message)=> async (dispatch) => {
     }
   };
 
-  export const getAllMessages = (message)=> async (dispatch) => {
+  export const getAllMessages = ()=> async (dispatch) => {
     try {
       const response = await axios.get(
-        "http://localhost:5000/message",
-       message
+        "http://localhost:5000/message"
+       
       );
   
       dispatch({ type: GET_ALL_MESSAGES, payload: response.data });

@@ -1,5 +1,4 @@
 import React from "react";
-import Card from "react-bootstrap/Card";
 import { useDispatch } from "react-redux";
 import { getOneUser } from "../../Redux/Actions/userAction";
 import { useNavigate } from "react-router-dom";
