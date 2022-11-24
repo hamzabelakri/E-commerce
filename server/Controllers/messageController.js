@@ -4,7 +4,7 @@ const getAllMessages = async (req, res) => {
     const messages = await Message.find();
     res.json({ messages });
   } catch (error) {
-    res.json({ msg: "failed to get message" });
+    res.json({ msg: "failed to get the messages" });
   }
 };
 

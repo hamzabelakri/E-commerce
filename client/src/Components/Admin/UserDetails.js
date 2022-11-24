@@ -5,7 +5,7 @@ import { useSelector, useDispatch } from "react-redux";
 import Button from "react-bootstrap/Button";
 import Form from "react-bootstrap/Form";
 import { updateUser } from "../../Redux/Actions/userAction";
-import UpdateUser from "../Admin/UpdateUser";
+import UpdateModal from "../Admin/UpdateModal";
 import DeleteModal from "./DeleteModal";
 
 function UserDetails() {
@@ -97,7 +97,7 @@ function UserDetails() {
            
          </div>
         
-         {show && <UpdateUser setShow={setShow}/>}
+         {show && <UpdateModal setShow={setShow}/>}
          {alert && <DeleteModal setAlert={setAlert}/>}
         
       </div>

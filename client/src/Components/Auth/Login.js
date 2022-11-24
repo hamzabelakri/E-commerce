@@ -1,7 +1,5 @@
 import React, { useState } from "react";
 import {Link} from 'react-router-dom'
-import Button from "react-bootstrap/Button";
-import Form from "react-bootstrap/Form";
 import { useDispatch } from "react-redux";
 import { useNavigate } from "react-router-dom";
 import { signIn } from "../../Redux/Actions/authAction";
@@ -12,6 +10,7 @@ function Login() {
   const [user, setUser] = useState({ email: "", password: "" });
   const handleChange = (event) => {
     setUser({ ...user, [event.target.name]: event.target.value });
+
   };
 
   const onSubmit = (event) => {
@@ -29,7 +28,7 @@ function Login() {
       <h2 class="mt-6 text-center text-3xl font-bold tracking-tight text-gray-900">Sign in to your account</h2>
       <p class="mt-2 text-center text-sm text-gray-600">
       Or
-        <a href="#" class="font-medium text-indigo-600 hover:text-indigo-500"><Link to="/register">create your account</Link></a>
+        <button href="#" class="font-medium text-indigo-600 hover:text-indigo-500"><Link to="/register">create your account</Link></button>
       </p>
     </div>
     <form class="mt-8 space-y-6" action="#" method="POST">
@@ -37,11 +36,11 @@ function Login() {
       <div class="-space-y-px rounded-md shadow-sm">
         <div>
           <label for="email-address" class="sr-only">Email address</label>
-          <input id="email-address" name="email" value={user.email} type="email" autocomplete="email" required class="relative block w-full appearance-none rounded-none rounded-t-md border border-gray-300 px-3 py-2 text-gray-900 placeholder-gray-500 focus:z-10 focus:border-indigo-500 focus:outline-none focus:ring-indigo-500 sm:text-sm" placeholder="Email address"  onChange={handleChange}/>
+          <input id="email-address" name="email" value={user.email} type="email"  autocomplete="email" required class="relative block w-full appearance-none rounded-none rounded-t-md border border-gray-300 px-3 py-2 text-gray-900 placeholder-gray-500 focus:z-10 focus:border-indigo-500 focus:outline-none focus:ring-indigo-500 sm:text-sm" placeholder="Email address"  onChange={handleChange}/>
         </div>
         <div>
           <label for="password" class="sr-only">Password</label>
-          <input id="password" name="password" value={user.password} type="password" autocomplete="current-password" required class="relative block w-full appearance-none rounded-none rounded-b-md border border-gray-300 px-3 py-2 text-gray-900 placeholder-gray-500 focus:z-10 focus:border-indigo-500 focus:outline-none focus:ring-indigo-500 sm:text-sm" placeholder="Password"  onChange={handleChange}/>
+          <input id="password" name="password" value={user.password} type="password"  autocomplete="current-password" required class="relative block w-full appearance-none rounded-none rounded-b-md border border-gray-300 px-3 py-2 text-gray-900 placeholder-gray-500 focus:z-10 focus:border-indigo-500 focus:outline-none focus:ring-indigo-500 sm:text-sm" placeholder="Password"  onChange={handleChange}/>
         </div>
       </div>
 
@@ -52,7 +51,7 @@ function Login() {
         </div>
 
         <div class="text-sm">
-          <a href="#" class="font-medium text-indigo-600 hover:text-indigo-500">Forgot your password?</a>
+          <button href="#" class="font-medium text-indigo-600 hover:text-indigo-500">Forgot your password?</button>
         </div>
       </div>
 

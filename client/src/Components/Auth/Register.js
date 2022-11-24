@@ -1,6 +1,4 @@
 import React, { useState } from "react";
-import Button from "react-bootstrap/Button";
-import Form from "react-bootstrap/Form";
 import { useDispatch } from "react-redux";
 import { signUp } from "../../Redux/Actions/authAction";
 import { useNavigate } from "react-router-dom";
@@ -16,6 +14,7 @@ function Sign() {
   });
   const handleChange = (event) => {
     setUser({ ...user, [event.target.name]: event.target.value });
+
   };
   const onSubmit = (event) => {
     event.preventDefault();
@@ -41,15 +40,15 @@ function Sign() {
       <div class="-space-y-px rounded-md shadow-sm">
       <div>
           <label for="username" >Username</label>
-          <input id="username" name="username" value={user.username} type="username" autocomplete="username" required class="relative block w-full appearance-none rounded-none rounded-t-md border border-gray-300 px-3 py-2 text-gray-900 placeholder-gray-500 focus:z-10 focus:border-indigo-500 focus:outline-none focus:ring-indigo-500 sm:text-sm" placeholder="Email username" onChange={handleChange}/>
+          <input id="username" name="username" value={user.username} type="username" required autocomplete="username"  class="relative block w-full appearance-none rounded-none rounded-t-md border border-gray-300 px-3 py-2 text-gray-900 placeholder-gray-500 focus:z-10 focus:border-indigo-500 focus:outline-none focus:ring-indigo-500 sm:text-sm" placeholder="Email username" onChange={handleChange}/>
         </div>
         <div>
           <label for="email-address" >Email address</label>
-          <input id="email-address" name="email" type="email" value={user.email} autocomplete="email" required class="relative block w-full appearance-none rounded-none rounded-t-md border border-gray-300 px-3 py-2 text-gray-900 placeholder-gray-500 focus:z-10 focus:border-indigo-500 focus:outline-none focus:ring-indigo-500 sm:text-sm" placeholder="Email address" onChange={handleChange}/>
+          <input id="email-address" name="email" type="email" value={user.email} required autocomplete="email"  class="relative block w-full appearance-none rounded-none rounded-t-md border border-gray-300 px-3 py-2 text-gray-900 placeholder-gray-500 focus:z-10 focus:border-indigo-500 focus:outline-none focus:ring-indigo-500 sm:text-sm" placeholder="Email address" onChange={handleChange}/>
         </div>
         <div>
           <label for="password" >Password</label>
-          <input id="password" name="password" type="password" value={user.password} autocomplete="current-password" required class="relative block w-full appearance-none rounded-none rounded-b-md border border-gray-300 px-3 py-2 text-gray-900 placeholder-gray-500 focus:z-10 focus:border-indigo-500 focus:outline-none focus:ring-indigo-500 sm:text-sm" placeholder="Enter password" onChange={handleChange}/>
+          <input id="password" name="password" type="password" value={user.password} required autocomplete="current-password"  class="relative block w-full appearance-none rounded-none rounded-b-md border border-gray-300 px-3 py-2 text-gray-900 placeholder-gray-500 focus:z-10 focus:border-indigo-500 focus:outline-none focus:ring-indigo-500 sm:text-sm" placeholder="Enter password" onChange={handleChange}/>
         </div>
       </div>
 

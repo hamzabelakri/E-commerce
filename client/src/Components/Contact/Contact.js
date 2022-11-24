@@ -7,6 +7,7 @@ function Contact() {
     const [message,setMessage]=useState({name:'',email:"",message:''});
 const handleChange = (event) => {
     setMessage({...message, [event.target.name]: event.target.value})
+   
 }
 
 const onClick = (event) => {
@@ -38,6 +39,7 @@ event.preventDefault();
                   id="name"
                   name="name"
                   value={message.name} 
+                  required
                   onChange={handleChange}
                   class="w-full bg-gray-100 bg-opacity-50 rounded border border-gray-300 focus:border-indigo-500 focus:bg-white focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
                />
@@ -53,6 +55,7 @@ event.preventDefault();
                   id="email"
                   name="email"
                   value={message.email} 
+                  required
                   onChange={handleChange}
                   class="w-full bg-gray-100 bg-opacity-50 rounded border border-gray-300 focus:border-indigo-500 focus:bg-white focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
                     />
@@ -67,6 +70,7 @@ event.preventDefault();
                   id="message"
                   name="message"
                   value={message.message} 
+                  required
                   class="w-full bg-gray-100 bg-opacity-50 rounded border border-gray-300 focus:border-indigo-500 focus:bg-white focus:ring-2 focus:ring-indigo-200 h-32 text-base outline-none text-gray-700 py-1 px-3 resize-none leading-6 transition-colors duration-200 ease-in-out"
                   onChange={handleChange}  ></textarea>
               </div>

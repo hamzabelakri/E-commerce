@@ -34,7 +34,7 @@ export const updateUser=(id, newUser) => async (dispatch)=>{
     const response = await axios.put(`http://localhost:5000/users/${id}`,newUser)
     dispatch({ type: UPDATE_USER, payload: response.data });
 
-    console.log(response) 
+    console.log(response.data) 
   } catch (error) {
     console.log(error);
   }
