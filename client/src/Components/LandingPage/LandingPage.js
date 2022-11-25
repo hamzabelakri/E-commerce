@@ -7,11 +7,10 @@ function LandingPage() {
         <div class="relative mx-auto max-w-7xl px-4 sm:static sm:px-6 lg:px-8">
           <div class="sm:max-w-lg">
             <h1 class="font text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl">
-              Summer styles are finally here
+              The latest trending tech are finally here
             </h1>
             <p class="mt-4 text-xl text-gray-500">
-              This year, our new summer collection will shelter you from the
-              harsh elements of a world that doesn't care if you live or die.
+            Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis.
             </p>
           </div>
           <div>
@@ -25,37 +24,14 @@ function LandingPage() {
                     <div class="grid flex-shrink-0 grid-cols-1 gap-y-6 lg:gap-y-8">
                       <div class="h-64 w-44 overflow-hidden rounded-lg sm:opacity-0 lg:opacity-100">
                         <img
-                          src="https://tailwindui.com/img/ecommerce-images/home-page-03-hero-image-tile-01.jpg"
+                          src="https://images.unsplash.com/photo-1521405924368-64c5b84bec60?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTh8fGRyb25lfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60"
                           alt=""
                           class="h-full w-full object-cover object-center"
                         />
                       </div>
                       <div class="h-64 w-44 overflow-hidden rounded-lg">
                         <img
-                          src="https://tailwindui.com/img/ecommerce-images/home-page-03-hero-image-tile-02.jpg"
-                          alt=""
-                          class="h-full w-full object-cover object-center"
-                        />
-                      </div>
-                    </div>
-                    <div class="grid flex-shrink-0 grid-cols-1 gap-y-6 lg:gap-y-8">
-                      <div class="h-64 w-44 overflow-hidden rounded-lg">
-                        <img
-                          src="https://tailwindui.com/img/ecommerce-images/home-page-03-hero-image-tile-03.jpg"
-                          alt=""
-                          class="h-full w-full object-cover object-center"
-                        />
-                      </div>
-                      <div class="h-64 w-44 overflow-hidden rounded-lg">
-                        <img
-                          src="https://tailwindui.com/img/ecommerce-images/home-page-03-hero-image-tile-04.jpg"
-                          alt=""
-                          class="h-full w-full object-cover object-center"
-                        />
-                      </div>
-                      <div class="h-64 w-44 overflow-hidden rounded-lg">
-                        <img
-                          src="https://tailwindui.com/img/ecommerce-images/home-page-03-hero-image-tile-05.jpg"
+                          src="https://images.unsplash.com/photo-1519183071298-a2962feb14f4?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80"
                           alt=""
                           class="h-full w-full object-cover object-center"
                         />
@@ -64,14 +40,37 @@ function LandingPage() {
                     <div class="grid flex-shrink-0 grid-cols-1 gap-y-6 lg:gap-y-8">
                       <div class="h-64 w-44 overflow-hidden rounded-lg">
                         <img
-                          src="https://tailwindui.com/img/ecommerce-images/home-page-03-hero-image-tile-06.jpg"
+                          src="https://images.unsplash.com/photo-1543512214-318c7553f230?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8YW1hem9uJTIwYWxleGF8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60"
                           alt=""
                           class="h-full w-full object-cover object-center"
                         />
                       </div>
                       <div class="h-64 w-44 overflow-hidden rounded-lg">
                         <img
-                          src="https://tailwindui.com/img/ecommerce-images/home-page-03-hero-image-tile-07.jpg"
+                          src="https://images.unsplash.com/photo-1660087031197-f483b4388e91?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8OXx8QXVkaW8lMjBUZWNobmljYSUyMEhlYWRwaG9uZXN8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60"
+                          alt=""
+                          class="h-full w-full object-cover object-center"
+                        />
+                      </div>
+                      <div class="h-64 w-44 overflow-hidden rounded-lg">
+                        <img
+                          src="https://images.unsplash.com/photo-1549638767-0ccf6cb1281b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTN8fGpibHxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60"
+                          alt=""
+                          class="h-full w-full object-cover object-center"
+                        />
+                      </div>
+                    </div>
+                    <div class="grid flex-shrink-0 grid-cols-1 gap-y-6 lg:gap-y-8">
+                      <div class="h-64 w-44 overflow-hidden rounded-lg">
+                        <img
+                          src="https://images.unsplash.com/photo-1661961110372-8a7682543120?ixlib=rb-4.0.3&ixid=MnwxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80"
+                          alt=""
+                          class="h-full w-full object-cover object-center"
+                        />
+                      </div>
+                      <div class="h-64 w-44 overflow-hidden rounded-lg">
+                        <img
+                          src="https://images.unsplash.com/photo-1591815302525-756a9bcc3425?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTJ8fGlwaG9uZXxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60"
                           alt=""
                           class="h-full w-full object-cover object-center"
                         />
@@ -85,7 +84,7 @@ function LandingPage() {
                 href="#"
                 class="inline-block rounded-md border border-transparent bg-indigo-600 py-3 px-8 text-center font-medium text-white hover:bg-indigo-700"
               >
-                Shop Now
+                Discover Now
               </a>
             </div>
           </div>

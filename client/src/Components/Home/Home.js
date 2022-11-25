@@ -20,7 +20,13 @@ function Home() {
 
         <div class="mt-6 grid grid-cols-1 gap-y-10 gap-x-6 sm:grid-cols-2 lg:grid-cols-4 xl:gap-x-8">
           {products.length === 0 ? (
-            <Spinner animation="border" variant="success" />
+            <div class="flex justify-center items-center space-x-2">
+            <div class="spinner-border animate-spin inline-block w-8 h-8 border-4 rounded-full text-blue-600" role="status">
+              <span class="visually-hidden">Loading...</span>
+            </div>
+            
+          
+          </div>
           ) : (
             products.map((elt) => <ProductCard key={elt._id} elt={elt} />)
           )}
