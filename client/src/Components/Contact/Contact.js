@@ -1,22 +1,21 @@
-import React, { useState }from "react";
-import { useDispatch} from "react-redux";
-import {sendMessage} from "../../Redux/Actions/messageAction";
+import React, { useState } from "react";
+import { useDispatch } from "react-redux";
+import { sendMessage } from "../../Redux/Actions/messageAction";
 
 function Contact() {
-    const dispatch = useDispatch();
-    const [message,setMessage]=useState({name:'',email:"",message:''});
-const handleChange = (event) => {
-    setMessage({...message, [event.target.name]: event.target.value})
-   
-}
+  const dispatch = useDispatch();
+  const [message, setMessage] = useState({ name: "", email: "", message: "" });
+  const handleChange = (event) => {
+    setMessage({ ...message, [event.target.name]: event.target.value });
+  };
 
-const onClick = (event) => {
-dispatch(sendMessage(message));
-setMessage({name:'',email:"",message:''});
-event.preventDefault();
-}
+  const onClick = (event) => {
+    dispatch(sendMessage(message));
+    setMessage({ name: "", email: "", message: "" });
+    event.preventDefault();
+  };
   return (
-    <section class="text-gray-600 body-font relative" >
+    <section class="text-gray-600 body-font relative">
       <div class="container px-5 py-12 mx-auto">
         <div class="flex flex-col text-center w-full mb-12">
           <h1 class="sm:text-3xl text-2xl font-medium title-font mb-4 text-gray-900">
@@ -38,11 +37,11 @@ event.preventDefault();
                   type="text"
                   id="name"
                   name="name"
-                  value={message.name} 
+                  value={message.name}
                   required
                   onChange={handleChange}
                   class="w-full bg-gray-100 bg-opacity-50 rounded border border-gray-300 focus:border-indigo-500 focus:bg-white focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
-               />
+                />
               </div>
             </div>
             <div class="p-2 w-1/2">
@@ -54,11 +53,11 @@ event.preventDefault();
                   type="email"
                   id="email"
                   name="email"
-                  value={message.email} 
+                  value={message.email}
                   required
                   onChange={handleChange}
                   class="w-full bg-gray-100 bg-opacity-50 rounded border border-gray-300 focus:border-indigo-500 focus:bg-white focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
-                    />
+                />
               </div>
             </div>
             <div class="p-2 w-full">
@@ -69,18 +68,21 @@ event.preventDefault();
                 <textarea
                   id="message"
                   name="message"
-                  value={message.message} 
+                  value={message.message}
                   required
                   class="w-full bg-gray-100 bg-opacity-50 rounded border border-gray-300 focus:border-indigo-500 focus:bg-white focus:ring-2 focus:ring-indigo-200 h-32 text-base outline-none text-gray-700 py-1 px-3 resize-none leading-6 transition-colors duration-200 ease-in-out"
-                  onChange={handleChange}  ></textarea>
+                  onChange={handleChange}
+                ></textarea>
               </div>
             </div>
             <div class="p-2 w-full">
-              <button class="flex mx-auto text-white bg-indigo-500 border-0 py-2 px-8 focus:outline-none hover:bg-indigo-600 rounded text-lg" onClick={onClick}>
+              <button
+                class="flex mx-auto text-white bg-indigo-500 border-0 py-2 px-8 focus:outline-none hover:bg-indigo-600 rounded text-lg"
+                onClick={onClick}
+              >
                 Submit
               </button>
             </div>
-            
           </div>
         </div>
       </div>
