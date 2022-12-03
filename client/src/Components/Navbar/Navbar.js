@@ -71,26 +71,26 @@ function CustomNavbar() {
         
           <a
             href="#"
-            class="flex items-center text-sm font-medium text-gray-700 hover:text-gray-800" 
+            class="no-underline	flex items-center text-sm font-medium text-gray-700 hover:text-gray-800" 
           >
-           <Link to="/landingpage">
+           <Link to="/landingpage" class="no-underline">
             Home
             </Link>
           </a>
 
           <a
             href="#"
-            class="flex items-center text-sm font-medium text-gray-700 hover:text-gray-800"
+            class="no-underline flex items-center text-sm font-medium text-gray-700 hover:text-gray-800"
           >
-             <Link to="/">
+             <Link to="/" class="no-underline">
             Products
             </Link>
           </a>
           <a
             href="#"
-            class="flex items-center text-sm font-medium text-gray-700 hover:text-gray-800"
+            class="no-underline flex items-center text-sm font-medium text-gray-700 hover:text-gray-800"
           >
-             <Link to="/contact">
+             <Link to="/contact" class="no-underline">
             Contact us
             </Link>
           </a>
@@ -103,7 +103,7 @@ function CustomNavbar() {
         {connected ? (<a
             href="#"            
 
-            class="text-sm font-medium text-gray-700 hover:text-gray-800" 
+            class="no-underline text-sm font-medium text-gray-700 hover:text-gray-800" 
           onClick={handleDeconnect}>
             Log out 
           </a>):(
@@ -111,9 +111,9 @@ function CustomNavbar() {
           <a
             href="#"            
 
-            class="text-sm font-medium text-gray-700 hover:text-gray-800" 
+            class="no-underline text-sm font-medium text-gray-700 hover:text-gray-800" 
           >
-          <Link to="/login">  Sign in </Link>
+          <Link to="/login" class="no-underline">  Sign in </Link>
           </a>)}
           
           <span class="h-6 w-px bg-gray-200" aria-hidden="true"></span>

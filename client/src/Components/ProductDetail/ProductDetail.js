@@ -1,5 +1,4 @@
 import React from "react";
-import "./ProductDetail.css";
 import { useSelector, useDispatch } from "react-redux";
 
 function ProductDetail({setShow}) {

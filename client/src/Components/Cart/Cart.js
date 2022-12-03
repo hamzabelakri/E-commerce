@@ -2,7 +2,6 @@ import React from "react";
 
 function Cart() {
   return (
-
     /* <div className="cartitem">
       <div className="cartitem__image">
         <img src="" alt="" />
@@ -22,6 +21,46 @@ function Cart() {
       <div class="grid sm:px-10 lg:grid-cols-2 lg:px-20 xl:px-32">
         <div class="px-4 pt-8">
           <p class="text-xl font-medium">Order Summary</p>
+          {/*   <div class="flex justify-between mt-8 space-y-3 rounded-lg border bg-white px-2 py-4 sm:px-6">
+            <div class="flex flex-col rounded-lg bg-white sm:flex-row">
+              <img
+                class="m-2 h-24 w-28 rounded-md border object-cover object-center"
+                src="https://images.unsplash.com/photo-1519183071298-a2962feb14f4?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80"
+                alt=""
+              />
+              <div class="flex w-full flex-col px-4 py-4">
+                <span class="font-semibold">
+                  Nike Air Max Pro 8888 - Super Light
+                </span>
+                <p class="text-lg font-bold">$138.99</p>
+              </div>
+            </div>
+            <div>
+             <button
+                type="button"
+                class=" top-4 right-4 text-gray-400 hover:text-gray-500 sm:top-8 sm:right-6 md:top-6 md:right-6 lg:top-8 lg:right-8"
+                >
+                
+                <svg
+                  class="h-6 w-6"
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke-width="1.5"
+                  stroke="currentColor"
+                  aria-hidden="true"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M6 18L18 6M6 6l12 12"
+                  />
+                </svg>
+              </button>
+            </div>
+            
+           
+          </div> */}
           <div class="mt-8 space-y-3 rounded-lg border bg-white px-2 py-4 sm:px-6">
             <div class="flex flex-col rounded-lg bg-white sm:flex-row">
               <img
