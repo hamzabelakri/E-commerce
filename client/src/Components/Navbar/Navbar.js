@@ -73,7 +73,7 @@ function CustomNavbar() {
             href="#"
             class="no-underline	flex items-center text-sm font-medium text-gray-700 hover:text-gray-800" 
           >
-           <Link to="/landingpage" class="no-underline">
+           <Link to="/" class="no-underline">
             Home
             </Link>
           </a>
@@ -82,7 +82,7 @@ function CustomNavbar() {
             href="#"
             class="no-underline flex items-center text-sm font-medium text-gray-700 hover:text-gray-800"
           >
-             <Link to="/" class="no-underline">
+             <Link to="/products" class="no-underline">
             Products
             </Link>
           </a>

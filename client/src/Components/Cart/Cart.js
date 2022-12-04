@@ -69,9 +69,7 @@ function Cart() {
                 alt=""
               />
               <div class="flex w-full flex-col px-4 py-4">
-                <span class="font-semibold">
-                  Nike Air Max Pro 8888 - Super Light
-                </span>
+                <span class="font-semibold">Cannon EOS-1D</span>
 
                 <p class="text-lg font-bold">$138.99</p>
               </div>
@@ -83,9 +81,7 @@ function Cart() {
                 alt=""
               />
               <div class="flex w-full flex-col px-4 py-4">
-                <span class="font-semibold">
-                  Nike Air Max Pro 8888 - Super Light
-                </span>
+                <span class="font-semibold">PlayStation 5</span>
 
                 <p class="mt-auto text-lg font-bold">$238.99</p>
               </div>
@@ -97,9 +93,7 @@ function Cart() {
                 alt=""
               />
               <div class="flex w-full flex-col px-4 py-4">
-                <span class="font-semibold">
-                  Nike Air Max Pro 8888 - Super Light
-                </span>
+                <span class="font-semibold">JBL FLIP 4</span>
 
                 <p class="text-lg font-bold">$138.99</p>
               </div>

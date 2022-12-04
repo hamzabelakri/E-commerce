@@ -19,7 +19,7 @@ function App() {
     <BrowserRouter>
       <CustomNavbar />
       <Routes>
-        <Route path="/" element={<Home />} />
+        <Route path="/" element={<LandingPage />} />
         <Route path="/product/:id" element={<ProductDetail />} /> 
         <Route path="/cart" element={<Cart />} /> 
         <Route path="/register" element={<Register />} /> 
@@ -28,7 +28,7 @@ function App() {
         <Route path="/profile" element={<UserProfile />} /> 
         <Route path="/usercard" element={<UserCard />} /> 
         <Route path="/user/:id" element={<UserDetails />} /> 
-        <Route path="landingpage" element={<LandingPage />} /> 
+        <Route path="products" element={<Home />} /> 
         <Route path="contact" element={<Contact />} /> 
 
       </Routes>
