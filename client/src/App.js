@@ -13,26 +13,25 @@ import UserDetails from "./Components/Admin/UserDetails";
 import PrivateRoute from "./Components/PrivateRoute/PrivateRoute";
 import LandingPage from "./Components/LandingPage/LandingPage";
 import Contact from "./Components/Contact/Contact";
-import Footer from "./Components/Footer/Footer"
+import Footer from "./Components/Footer/Footer";
 function App() {
   return (
     <BrowserRouter>
       <CustomNavbar />
       <Routes>
         <Route path="/" element={<LandingPage />} />
-        <Route path="/product/:id" element={<ProductDetail />} /> 
-        <Route path="/cart" element={<Cart />} /> 
-        <Route path="/register" element={<Register />} /> 
-        <Route path="/login" element={<Login />} /> 
-        <Route path="/admin" element={<AdminProfile />} /> 
-        <Route path="/profile" element={<UserProfile />} /> 
-        <Route path="/usercard" element={<UserCard />} /> 
-        <Route path="/user/:id" element={<UserDetails />} /> 
-        <Route path="products" element={<Home />} /> 
-        <Route path="contact" element={<Contact />} /> 
-
+        <Route path="products" element={<Home />} />
+        <Route path="/product/:id" element={<ProductDetail />} />
+        <Route path="/cart" element={<Cart />} />
+        <Route path="/register" element={<Register />} />
+        <Route path="/login" element={<Login />} />
+        <Route path="/admin" element={<AdminProfile />} />
+        <Route path="/profile" element={<UserProfile />} />
+        <Route path="/usercard" element={<UserCard />} />
+        <Route path="/user/:id" element={<UserDetails />} />
+        <Route path="contact" element={<Contact />} />
       </Routes>
-      <Footer/>
+      <Footer />
     </BrowserRouter>
   );
 }
