@@ -28,7 +28,6 @@ function UserDetails() {
                 <img
                   src="https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=3&amp;h=750&amp;w=1260"
                   class="rounded-sm h-80"
-                  width="80"
                 />
               </div>
             </div>
@@ -38,13 +37,10 @@ function UserDetails() {
               <span class="text-md text-gray-400"></span>
             </div>
 
-            <p class="px-16 text-center text-md text-gray-800">
-              Actress, musician, songwriter, and artist.DM for work inquires or{" "}
-              <a class="text-blue-800 text-md font-bold" href="#">
-                #tag{" "}
-              </a>
-              me in your message.
-            </p>
+            <div class="px-16 text-center text-lg font-semibold text-gray-800">
+              <p>{state.user.username}</p>
+              <p>{state.user.email}</p>
+            </div>
 
             <div class="px-16 mt-3 text-center"></div>
 

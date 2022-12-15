@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { useDispatch, useSelector} from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { updateUser } from "../../Redux/Actions/userAction";
 
 function UpdateModal({ setShow }) {
@@ -12,7 +12,6 @@ function UpdateModal({ setShow }) {
   });
   const handleChange = (event) => {
     setNewUser({ ...newUser, [event.target.name]: event.target.value });
-    
   };
   const handleCancel = (event) => {
     setShow(false);
@@ -36,16 +35,44 @@ function UpdateModal({ setShow }) {
             <div class="bg-white px-4 pt-5 pb-4 sm:p-6 sm:pb-4">
               <div class="sm:flex sm:items-start">
                 <div class="mt-1 text-center sm:mt-0 sm:ml-2 sm:text-left">
-                <label for="username" >Username</label>
-          <input id="username" name="username" value={newUser.username} type="username"  autocomplete="username" required class="relative  w-full appearance-none rounded-none rounded-t-md border border-gray-300 px-3 py-2 text-gray-900 placeholder-gray-500 focus:z-10 focus:border-indigo-500 focus:outline-none focus:ring-indigo-500 sm:text-sm" placeholder="Email username" onChange={handleChange}/>
+                  <label for="username">Username</label>
+                  <input
+                    id="username"
+                    name="username"
+                    value={newUser.username}
+                    type="username"
+                    autocomplete="username"
+                    required
+                    class="relative  w-full appearance-none rounded-none rounded-md border border-gray-300 px-3 py-2 text-gray-900 placeholder-gray-500 focus:z-10 focus:border-indigo-500 focus:outline-none focus:ring-indigo-500 sm:text-sm"
+                    placeholder="Email username"
+                    onChange={handleChange}
+                  />
 
+                  <label for="email-address">Email address</label>
+                  <input
+                    id="email-address"
+                    name="email"
+                    type="email"
+                    value={newUser.email}
+                    autocomplete="email"
+                    required
+                    class="relative  w-full appearance-none rounded-none rounded-md border border-gray-300 px-3 py-2 text-gray-900 placeholder-gray-500 focus:z-10 focus:border-indigo-500 focus:outline-none focus:ring-indigo-500 sm:text-sm"
+                    placeholder="Email address"
+                    onChange={handleChange}
+                  />
 
-          <label for="email-address" >Email address</label>
-          <input id="email-address" name="email" type="email" value={newUser.email}  autocomplete="email" required class="relative  w-full appearance-none rounded-none rounded-t-md border border-gray-300 px-3 py-2 text-gray-900 placeholder-gray-500 focus:z-10 focus:border-indigo-500 focus:outline-none focus:ring-indigo-500 sm:text-sm" placeholder="Email address" onChange={handleChange}/>
-
-          <label for="password" >Password</label>
-          <input id="password" name="password" type="password" value={newUser.password}  autocomplete="current-password" required class="relative  w-full appearance-none rounded-none rounded-b-md border border-gray-300 px-3 py-2 text-gray-900 placeholder-gray-500 focus:z-10 focus:border-indigo-500 focus:outline-none focus:ring-indigo-500 sm:text-sm" placeholder="Enter password" onChange={handleChange}/>
-
+                  <label for="password">Password</label>
+                  <input
+                    id="password"
+                    name="password"
+                    type="password"
+                    value={newUser.password}
+                    autocomplete="current-password"
+                    required
+                    class="relative  w-full appearance-none rounded-none rounded-md border border-gray-300 px-3 py-2 text-gray-900 placeholder-gray-500 focus:z-10 focus:border-indigo-500 focus:outline-none focus:ring-indigo-500 sm:text-sm"
+                    placeholder="Enter password"
+                    onChange={handleChange}
+                  />
                 </div>
               </div>
             </div>
@@ -53,7 +80,8 @@ function UpdateModal({ setShow }) {
               <button
                 type="button"
                 class="inline-flex w-full justify-center rounded-md border border-transparent bg-indigo-600 px-4 py-2 text-base font-medium text-white shadow-sm hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 sm:ml-3 sm:w-auto sm:text-sm"
-                onClick={handleUpdate} >
+                onClick={handleUpdate}
+              >
                 Update
               </button>
               <button

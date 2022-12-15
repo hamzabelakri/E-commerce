@@ -20,7 +20,7 @@ function App() {
       <CustomNavbar />
       <Routes>
         <Route path="/" element={<LandingPage />} />
-        <Route path="products" element={<Home />} />
+        <Route path="/products" element={<Home />} />
         <Route path="/product/:id" element={<ProductDetail />} />
         <Route path="/cart" element={<Cart />} />
         <Route path="/register" element={<Register />} />

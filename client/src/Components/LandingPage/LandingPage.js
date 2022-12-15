@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 function LandingPage() {
   return (
@@ -10,7 +11,9 @@ function LandingPage() {
               The latest trending tech are finally here
             </h1>
             <p class="mt-4 text-xl text-gray-500">
-            Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis.
+              Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean
+              commodo ligula eget dolor. Aenean massa. Cum sociis natoque
+              penatibus et magnis.
             </p>
           </div>
           <div>
@@ -82,9 +85,11 @@ function LandingPage() {
 
               <a
                 href="#"
-                class="inline-block rounded-md border border-transparent bg-indigo-600 py-3 px-8 text-center font-medium text-white hover:bg-indigo-700"
+                class="no-underline inline-block rounded-md border border-transparent bg-indigo-600 py-3 px-8 text-center font-medium text-white hover:bg-indigo-700"
               >
-                Discover Now
+                <Link to="/products" class="no-underline text-white">
+                  Discover Now
+                </Link>
               </a>
             </div>
           </div>
