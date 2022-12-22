@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import Container from "react-bootstrap/Container";
 import Nav from "react-bootstrap/Nav";
@@ -8,53 +8,25 @@ import { useNavigate } from "react-router-dom";
 import { logOut } from "../../Redux/Actions/authAction";
 
 function CustomNavbar() {
+  const [open, setOpen] = useState(false);
+
   const { connected } = useSelector((state) => state.authReducer);
   const dispatch = useDispatch();
   const navigate = useNavigate();
   const handleDeconnect = (event) => {
     dispatch(logOut(navigate));
   };
-
+  const handleClick = (event) => {
+    setOpen(!open);
+  };
   return (
-    /* <nav className="navbar">
-    <div className="navbar__logo">
-    <Link to="/">
-      <h2>My Store</h2>
-      </Link>     
-    </div>
-
-    <ul className="navbar__links">
-      <li>
-        <Link to="/cart" className="cart__link">
-          <i className="fas fa-shopping-cart"></i>
-          <span>
-            Cart <span className="cartlogo__badge">1</span>
-          </span>
-        </Link>
-      </li> */
-
-    /*  {connected && (
-            <div>
-              
-              <i onClick={handleDeconnect}>Log Out</i>
-             
-         
-             <p style={{ color: "white" }}>{user && user.username}</p> 
-            </div>)}  */
-    /*     </ul>
-
-    <div className="hamburger__menu">
-      <div></div>
-      <div></div>
-      <div></div>
-    </div>
-  </nav>  */
+   
 
     <header class="relative bg-white">
       <nav aria-label="Top" class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div class="border-b border-gray-200">
           <div class="flex h-16 items-center">
-            <div class="ml-4 flex lg:ml-0">
+            <div class="hidden md:block lg:ml-0">
               <a href="#">
                 <img
                   class="h-8 w-auto"
@@ -62,6 +34,42 @@ function CustomNavbar() {
                   alt=""
                 />
               </a>
+            </div>
+
+            <div class="flex md:hidden cursor-pointer text-gray-700	" onClick={handleClick}>
+              {open ? (
+                <svg
+                  class="h-6 w-6"
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke-width="1.5"
+                  stroke="currentColor"
+                  aria-hidden="true"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
+                  />
+                </svg>
+              ) : (
+                <svg
+                  class="h-6 w-6"
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke-width="1.5"
+                  stroke="currentColor"
+                  aria-hidden="true"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M6 18L18 6M6 6l12 12"
+                  />
+                </svg>
+              )}
             </div>
 
             <div class="hidden lg:ml-8 lg:block lg:self-stretch">
@@ -153,3 +161,37 @@ function CustomNavbar() {
 }
 
 export default CustomNavbar;
+
+ /* <nav className="navbar">
+    <div className="navbar__logo">
+    <Link to="/">
+      <h2>My Store</h2>
+      </Link>     
+    </div>
+
+    <ul className="navbar__links">
+      <li>
+        <Link to="/cart" className="cart__link">
+          <i className="fas fa-shopping-cart"></i>
+          <span>
+            Cart <span className="cartlogo__badge">1</span>
+          </span>
+        </Link>
+      </li> */
+
+    /*  {connected && (
+            <div>
+              
+              <i onClick={handleDeconnect}>Log Out</i>
+             
+         
+             <p style={{ color: "white" }}>{user && user.username}</p> 
+            </div>)}  */
+    /*     </ul>
+
+    <div className="hamburger__menu">
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+  </nav>  */

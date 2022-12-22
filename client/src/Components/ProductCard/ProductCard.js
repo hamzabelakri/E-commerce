@@ -12,20 +12,9 @@ function ProductCard({ elt }) {
   const [show, setShow] = useState(false);
   const handleClick = (event) => {
     dispatch(getOneProduct(elt._id, navigate));
-    /* show? setShow(false): setShow(true) */
+    show ? setShow(false) : setShow(true);
   };
   return (
-    /* <Card style={{ width: '18rem' }}>
-      <Card.Img variant="top" src={elt.imageUrl} />
-      <Card.Body>
-        <Card.Title>{elt.name}</Card.Title>
-        <Card.Text>
-          {elt.countInStock}
-        </Card.Text>
-        <Button variant="primary" onClick={handleClick}>View details</Button>
-      </Card.Body>
-    </Card> */
-
     <div class="group relative" onClick={handleClick}>
       {show && <ProductDetail setShow={setShow} />}
       <div class="min-h-80 aspect-w-1 aspect-h-1 w-full overflow-hidden rounded-md bg-gray-200 group-hover:opacity-75 lg:aspect-none lg:h-80">
@@ -52,3 +41,14 @@ function ProductCard({ elt }) {
 }
 
 export default ProductCard;
+
+/* <Card style={{ width: '18rem' }}>
+      <Card.Img variant="top" src={elt.imageUrl} />
+      <Card.Body>
+        <Card.Title>{elt.name}</Card.Title>
+        <Card.Text>
+          {elt.countInStock}
+        </Card.Text>
+        <Button variant="primary" onClick={handleClick}>View details</Button>
+      </Card.Body>
+    </Card> */

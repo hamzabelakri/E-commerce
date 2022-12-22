@@ -2,19 +2,7 @@ import React from "react";
 
 function Cart() {
   return (
-    /* <div className="cartitem">
-      <div className="cartitem__image">
-        <img src="" alt="" />
-      </div>
-       <Link to={`/product`} className="cartItem__name">
-        <p></p>
-      </Link> 
-      <p className="cartitem__price">$</p>
-      <select className="cartItem__select"></select>
-      <button className="cartItem__deleteBtn">
-        <i className="fas fa-trash"></i>
-      </button>
-    </div> */
+
 
     <>
       <div class="flex flex-col items-center  bg-white py-3 sm:flex-row sm:px-10 lg:px-20 xl:px-32"></div>
