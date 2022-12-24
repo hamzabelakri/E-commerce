@@ -55,58 +55,41 @@ function CustomNavbar() {
               </div>
 
               <div class="mt-2">
-                <div
-                
-                  class="space-y-10 px-4 pt-10 pb-8"
-                 
-                  onClick={handleClick}  >
+                <div class="space-y-10 px-4 pt-10 pb-8" onClick={handleClick}>
                   <div>
-                  <p
-                  href="#"
-                  class="font-medium "
-                >
-                  <Link to="/" class="no-underline text-gray-900">
-                    Home
-                  </Link>
-                </p>
-                <p
-                  href="#"
-                  class="font-medium "
-                >
-                  <Link to="/products" class="no-underline text-gray-900">
-                    Products
-                  </Link>
-                </p>
-                <p
-                  href="#"
-                  class="font-medium"
-                >
-                  <Link to="/contact" class="no-underline text-gray-900">
-                    Contact us
-                  </Link>
-                </p >
-                <div class="border-t border-gray-200 mb-2"></div>
+                    <p href="#" class="font-medium ">
+                      <Link to="/" class="no-underline text-gray-900">
+                        Home
+                      </Link>
+                    </p>
+                    <p href="#" class="font-medium ">
+                      <Link to="/products" class="no-underline text-gray-900">
+                        Products
+                      </Link>
+                    </p>
+                    <p href="#" class="font-medium">
+                      <Link to="/contact" class="no-underline text-gray-900">
+                        Contact us
+                      </Link>
+                    </p>
+                    <div class="border-t border-gray-200 mb-2"></div>
 
-                {connected ? (
-                  <p
-                    href="#"
-                    class="cursor-pointer font-medium text-gray-900"
-                    onClick={handleDeconnect}
-                  >
-                    Log out
-                  </p>
-                ) : (
-                  <p
-                    href="#"
-                    class="font-medium "
-                  >
-                    <Link to="/login" class="no-underline text-gray-900">
-                      {" "}
-                      Sign in{" "}
-                    </Link>
-                  </p>
-                )}
-                    
+                    {connected ? (
+                      <p
+                        href="#"
+                        class="cursor-pointer font-medium text-gray-900"
+                        onClick={handleDeconnect}
+                      >
+                        Log out
+                      </p>
+                    ) : (
+                      <p href="#" class="font-medium ">
+                        <Link to="/login" class="no-underline text-gray-900">
+                          {" "}
+                          Sign in{" "}
+                        </Link>
+                      </p>
+                    )}
                   </div>
                 </div>
               </div>
@@ -131,51 +114,47 @@ function CustomNavbar() {
               class="flex md:hidden cursor-pointer text-gray-700	"
               onClick={handleClick}
             >
-            
-                <svg
-                  class="h-6 w-6"
-                  xmlns="http://www.w3.org/2000/svg"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke-width="1.5"
-                  stroke="currentColor"
-                  aria-hidden="true"
-                >
-                  <path
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
-                  />
-                </svg>
-             
-                
-            
+              <svg
+                class="h-6 w-6"
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="1.5"
+                stroke="currentColor"
+                aria-hidden="true"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
+                />
+              </svg>
             </div>
 
             <div class="hidden md:ml-8 md:block md:self-stretch">
               <div class="flex h-full space-x-8">
-                <a
-                  href="#"
-                  class="no-underline	flex items-center "
-                >
-                  <Link to="/" class="no-underline text-sm font-medium text-gray-700 hover:text-gray-800">
+                <a href="#" class="no-underline	flex items-center ">
+                  <Link
+                    to="/"
+                    class="no-underline text-sm font-medium text-gray-700 hover:text-gray-800"
+                  >
                     Home
                   </Link>
                 </a>
 
-                <a
-                  href="#"
-                  class="no-underline flex items-center "
-                >
-                  <Link to="/products" class="no-underline text-sm font-medium text-gray-700 hover:text-gray-800">
+                <a href="#" class="no-underline flex items-center ">
+                  <Link
+                    to="/products"
+                    class="no-underline text-sm font-medium text-gray-700 hover:text-gray-800"
+                  >
                     Products
                   </Link>
                 </a>
-                <a
-                  href="#"
-                  class="no-underline flex items-center "
-                >
-                  <Link to="/contact" class="no-underline text-sm font-medium text-gray-700 hover:text-gray-800">
+                <a href="#" class="no-underline flex items-center ">
+                  <Link
+                    to="/contact"
+                    class="no-underline text-sm font-medium text-gray-700 hover:text-gray-800"
+                  >
                     Contact us
                   </Link>
                 </a>
@@ -193,11 +172,11 @@ function CustomNavbar() {
                     Log out
                   </a>
                 ) : (
-                  <a
-                    href="#"
-                    class="no-underline "
-                  >
-                    <Link to="/login" class="no-underline text-sm font-medium text-gray-700 hover:text-gray-800">
+                  <a href="#" class="no-underline ">
+                    <Link
+                      to="/login"
+                      class="no-underline text-sm font-medium text-gray-700 hover:text-gray-800"
+                    >
                       {" "}
                       Sign in{" "}
                     </Link>

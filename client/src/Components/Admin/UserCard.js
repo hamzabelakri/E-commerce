@@ -33,7 +33,7 @@ function UserCard({ elt }) {
           <p class="text-lg font-bold">{elt.username}</p>
           {/* <p class="text-sm text-gray-800">{elt.email}</p> */}
           <a
-            class="text-purple-600 hover:text-purple-500 underline text-sm"
+            class="cursor-pointer text-purple-600 hover:text-purple-500 underline text-sm"
             onClick={handleClick}
           >
             More Details 👉
