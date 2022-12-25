@@ -32,7 +32,7 @@ export const signIn = (user, navigate) => async (dispatch) => {
 };
 
 export const logOut=(navigate)=>{
-  navigate('/');
+  navigate('/login');
   return {type:LOG_OUT}
 
 }
