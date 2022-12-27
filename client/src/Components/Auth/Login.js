@@ -38,7 +38,7 @@ function Login() {
               href="#"
               class="font-medium text-indigo-600 hover:text-indigo-500"
             >
-              <Link to="/register">create your account</Link>
+              <Link to="/register">create new one</Link>
             </button>
           </p>
         </div>

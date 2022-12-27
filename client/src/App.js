@@ -26,11 +26,10 @@ function App() {
         <Route path="/cart" element={<Cart />} />
         <Route path="/register" element={<Register />} />
         <Route path="/login" element={<Login />} />
-        <Route path="/profile" element={<UserProfile />} />
         <Route path="/usercard" element={<UserCard />} />
         <Route path="/user/:id" element={<UserDetails />} />
         <Route path="contact" element={<Contact />} />
-        <Route path="*" element={<NotFound/>}/>
+        <Route path="*" element={<NotFound />} />
         <Route
           path="/admin"
           element={
@@ -39,7 +38,16 @@ function App() {
             </PrivateRoute>
           }
         />
+        <Route
+          path="/profile"
+          element={
+            <PrivateRoute>
+              <UserProfile />
+            </PrivateRoute>
+          }
+        />
       </Routes>
+
       <Footer />
     </BrowserRouter>
   );

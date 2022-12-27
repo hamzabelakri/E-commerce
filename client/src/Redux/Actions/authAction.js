@@ -24,7 +24,13 @@ export const signIn = (user, navigate) => async (dispatch) => {
       user
     );
     dispatch({ type: LOGIN, payload: response.data });
-    navigate('/profile')
+    if(response.data.user.role===1){
+      navigate('/admin')
+ }
+ else{
+     navigate('/profile')
+ }
+    
     console.log(response.data);
   } catch (error) {
     console.log(error);
