@@ -13,7 +13,7 @@ export const signUp = (user, navigate)=> async (dispatch) => {
     console.log(response.data);
 
   } catch (error) {
-    console.log(error);
+    error.response.data.errors.map((err) => alert(err.msg));
   }
 };
 
@@ -33,7 +33,7 @@ export const signIn = (user, navigate) => async (dispatch) => {
     
     console.log(response.data);
   } catch (error) {
-    console.log(error);
+    error.response.data.errors.map((err) => alert(err.msg));
   }
 };
 
