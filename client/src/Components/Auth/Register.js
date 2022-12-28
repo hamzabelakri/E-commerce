@@ -41,7 +41,7 @@ function Sign() {
         </div>
         <form class="mt-8 space-y-6" action="#" method="POST">
           <input type="hidden" name="remember" value="true" />
-          <div class="-space-y-2 rounded-md shadow-sm">
+          <div class="-space-y-3 rounded-md ">
             <div>
               <label for="username" class=""></label>
               <input

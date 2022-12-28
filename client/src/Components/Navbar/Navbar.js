@@ -162,7 +162,7 @@ function CustomNavbar() {
             </div>
 
             <div class="ml-auto flex items-center">
-              <div class="hidden lg:flex lg:flex-1 lg:items-center lg:justify-end lg:space-x-6">
+              <div class="hidden md:flex md:flex-1 md:items-center md:justify-end md:space-x-6">
                 {connected ? (
                   <a
                     href="#"
