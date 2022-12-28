@@ -30,6 +30,7 @@ function App() {
         <Route path="/user/:id" element={<UserDetails />} />
         <Route path="contact" element={<Contact />} />
         <Route path="*" element={<NotFound />} />
+        
         <Route
           path="/admin"
           element={

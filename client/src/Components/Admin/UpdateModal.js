@@ -43,7 +43,7 @@ function UpdateModal({ setShow }) {
                     type="username"
                     autocomplete="username"
                     required
-                    class="relative  w-full appearance-none rounded-none rounded-md border border-gray-300 px-3 py-2 text-gray-900 placeholder-gray-500 focus:z-10 focus:border-indigo-500 focus:outline-none focus:ring-indigo-500 sm:text-sm"
+                    class="relative  w-full appearance-none rounded-md border border-gray-300 px-3 py-2 text-gray-900 placeholder-gray-500 focus:z-10 focus:border-indigo-500 focus:outline-none focus:ring-indigo-500 sm:text-sm"
                     placeholder="Email username"
                     onChange={handleChange}
                   />
@@ -56,7 +56,7 @@ function UpdateModal({ setShow }) {
                     value={newUser.email}
                     autocomplete="email"
                     required
-                    class="relative  w-full appearance-none rounded-none rounded-md border border-gray-300 px-3 py-2 text-gray-900 placeholder-gray-500 focus:z-10 focus:border-indigo-500 focus:outline-none focus:ring-indigo-500 sm:text-sm"
+                    class="relative  w-full appearance-none rounded-md border border-gray-300 px-3 py-2 text-gray-900 placeholder-gray-500 focus:z-10 focus:border-indigo-500 focus:outline-none focus:ring-indigo-500 sm:text-sm"
                     placeholder="Email address"
                     onChange={handleChange}
                   />
@@ -69,7 +69,7 @@ function UpdateModal({ setShow }) {
                     value={newUser.password}
                     autocomplete="current-password"
                     required
-                    class="relative  w-full appearance-none rounded-none rounded-md border border-gray-300 px-3 py-2 text-gray-900 placeholder-gray-500 focus:z-10 focus:border-indigo-500 focus:outline-none focus:ring-indigo-500 sm:text-sm"
+                    class="relative  w-full appearance-none rounded-md border border-gray-300 px-3 py-2 text-gray-900 placeholder-gray-500 focus:z-10 focus:border-indigo-500 focus:outline-none focus:ring-indigo-500 sm:text-sm"
                     placeholder="Enter password"
                     onChange={handleChange}
                   />
