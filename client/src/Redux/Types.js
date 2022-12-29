@@ -13,3 +13,4 @@ export const DELETE_USER = "DELETE_USER";
 //// message
 export const Post_Message = "Post_Message";
 export const GET_ALL_MESSAGES = "GET_ALL_MESSAGES";
+export const DELETE_MESSAGE = "DELETE_MESSAGE"

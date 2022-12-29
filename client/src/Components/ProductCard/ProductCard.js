@@ -11,7 +11,7 @@ function ProductCard({ elt }) {
   const navigate = useNavigate();
   const [show, setShow] = useState(false);
   const handleClick = (event) => {
-    dispatch(getOneProduct(elt._id, navigate));
+    dispatch(getOneProduct(elt._id));
     show ? setShow(false) : setShow(true);
   };
   return (
@@ -27,10 +27,10 @@ function ProductCard({ elt }) {
       <div class="mt-4 flex justify-between">
         <div>
           <h3 class="text-sm text-gray-700">
-            <a class="no-underline" href="#">
+            
               <span aria-hidden="true" class="absolute inset-0"></span>
               {elt.name}
-            </a>
+            
           </h3>
           <p class="mt-1 text-sm text-gray-500">in stock {elt.countInStock}</p>
         </div>

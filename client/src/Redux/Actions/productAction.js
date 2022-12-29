@@ -17,7 +17,7 @@ export const getOneProduct = (id, navigate) => async (dispatch) => {
   try {
     const response = await axios.get(`http://localhost:5000/product/${id}`)
     dispatch({ type:GET_ONE_PRODUCT, payload: response.data})
-    navigate(`/product/${id}`)
+    /* navigate(`/product/${id}`) */
   } catch (error) {
     
   }

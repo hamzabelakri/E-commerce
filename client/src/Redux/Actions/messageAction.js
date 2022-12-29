@@ -1,4 +1,4 @@
-import { Post_Message, GET_ALL_MESSAGES} from "../Types";
+import { Post_Message, GET_ALL_MESSAGES, DELETE_MESSAGE} from "../Types";
 import axios from "axios";
 
 export const sendMessage = (message)=> async (dispatch) => {
@@ -33,3 +33,15 @@ export const sendMessage = (message)=> async (dispatch) => {
       console.log(error);
     }
   };
+
+  export const deleteMessage = (id) => async (dispatch) => {
+    try {
+      const response = await axios.delete(`http://localhost:5000/message/${id}`)
+      
+      dispatch({ type:DELETE_MESSAGE})
+      console.log(response.data)
+      alert(response.data.msg)
+    } catch (error) {
+      console.log(error)
+    }
+  }

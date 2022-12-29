@@ -1,6 +1,6 @@
 import { Post_Message, GET_ALL_MESSAGES } from "../Types";
 
-const initState = { messages: [] };
+const initState = { messages: [], message: {} };
 const messageReducer = (state = initState, action) => {
   switch (action.type) {
     case Post_Message:
