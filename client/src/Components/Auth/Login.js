@@ -16,6 +16,7 @@ function Login() {
     dispatch(signIn(user, navigate));
     event.preventDefault();
     setUser({ email: "", password: "" });
+   
   };
   return (
     <div

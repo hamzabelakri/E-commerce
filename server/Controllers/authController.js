@@ -47,7 +47,7 @@ const SignIn = async (req, res) => {
           { username: user.username, email: user.email, id: user._id },
           process.env.KEY
         );
-        res.status(200).json({ msg: "welcome back", user, token });
+        res.status(200).json({ msg: `welcome back ${user.username}`, user, token });
       } else {
         res.status(401).json({ errors: [{ msg: "wrong password" }] });
       }

@@ -11,9 +11,10 @@ export const sendMessage = (message)=> async (dispatch) => {
       dispatch({ type: Post_Message, payload: response.data });
       
       console.log(response.data);
-  
+      alert(response.data.msg)
     } catch (error) {
-      console.log(error);
+      console.log(error.response.data);
+      alert(error.response.data.error);
     }
   };
 

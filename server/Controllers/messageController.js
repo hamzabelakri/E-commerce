@@ -19,7 +19,7 @@ const postMessage = async (req, res) => {
     await newMessage.save();
     res.status(201).json({ msg: "Message sent", newMessage});
   } catch (error) {
-    res.status(400).json({ msg: "Failed to sent message" });
+    res.status(400).json({ error: "Failed to sent message" });
   }
 };
 
