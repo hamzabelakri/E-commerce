@@ -15,14 +15,14 @@ function UserProfile() {
       <div class="md:flex items-center justify-center">
         <div class="mt-5 md:col-span-2 md:mt-0">
           <div class="px-4 sm:px-0">
-            <h3 class="text-lg font-medium leading-6 text-gray-900">
-              Complete Information
+            <h3 class="sm:flex sm:justify-center text-lg font-medium leading-6 text-gray-900">
+              Complete Your Profile
             </h3>
-            <p class="mt-1 text-sm text-gray-600">
+            <p class="sm:flex sm:justify-center mt-1 text-sm text-gray-600">
               Use a permanent address where you can receive your order.
             </p>
           </div>
-          <form action="#" method="POST">
+          <form class="-mt-8">
             <div class="">
               <div class="bg-white px-4 py-5 sm:p-6">
                 <div class="grid grid-cols-6 gap-6">
@@ -76,7 +76,7 @@ function UserProfile() {
                     />
                   </div>
 
-                  <div class="col-span-6 sm:col-span-3">
+                  {/*    <div class="col-span-6 sm:col-span-3">
                     <label
                       for="country"
                       class="block text-sm font-medium text-gray-700"
@@ -93,7 +93,7 @@ function UserProfile() {
                       <option>Canada</option>
                       <option>Mexico</option>
                     </select>
-                  </div>
+                  </div> */}
 
                   <div class="col-span-6">
                     <label
@@ -159,10 +159,16 @@ function UserProfile() {
                     />
                   </div>
                   <div class="col-span-6 sm:col-span-3 lg:col-span-2">
-                    <label className="block text-sm font-medium text-gray-700">Photo</label>
+                    <label className="block text-sm font-medium text-gray-700">
+                      Photo
+                    </label>
                     <div className="mt-1 flex items-center">
                       <span className="inline-block h-12 w-12 overflow-hidden rounded-full bg-gray-100">
-                        <svg className="h-full w-full text-gray-300" fill="currentColor" viewBox="0 0 24 24">
+                        <svg
+                          className="h-full w-full text-gray-300"
+                          fill="currentColor"
+                          viewBox="0 0 24 24"
+                        >
                           <path d="M24 20.993V24H0v-2.996A14.977 14.977 0 0112.004 15c4.904 0 9.26 2.354 11.996 5.993zM16.002 8.999a4 4 0 11-8 0 4 4 0 018 0z" />
                         </svg>
                       </span>

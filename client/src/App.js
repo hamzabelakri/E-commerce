@@ -15,6 +15,7 @@ import LandingPage from "./Components/LandingPage/LandingPage";
 import Contact from "./Components/Contact/Contact";
 import Footer from "./Components/Footer/Footer";
 import NotFound from "./Components/NotFound/NotFound";
+import Dashbord from "./Components/Dashbord/Dashbord";
 function App() {
   return (
     <BrowserRouter>
@@ -29,6 +30,7 @@ function App() {
         <Route path="/usercard" element={<UserCard />} />
         <Route path="/user/:id" element={<UserDetails />} />
         <Route path="contact" element={<Contact />} />
+        <Route path="dash" element={<Dashbord />} />
         <Route path="*" element={<NotFound />} />
         
         <Route
