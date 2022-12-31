@@ -17,6 +17,7 @@ import Footer from "./Components/Footer/Footer";
 import NotFound from "./Components/NotFound/NotFound";
 import MessageCard from "./Components/Admin/MessageCard";
 import ProductsList from "./Components/Admin/ProductsList";
+import NewProduct from "./Components/Admin/NewProduct";
 function App() {
   return (
     <BrowserRouter>
@@ -33,7 +34,7 @@ function App() {
         <Route path="contact" element={<Contact />} />
         <Route path="messagecard" element={<MessageCard />} />
         <Route path="productlist" element={<ProductsList />} />
-
+        <Route path="newproduct" element={<NewProduct />} />
         <Route path="*" element={<NotFound />} />
         
         <Route

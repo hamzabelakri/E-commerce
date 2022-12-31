@@ -1,6 +1,16 @@
 import React from "react";
+import { useDispatch } from "react-redux";
+import { deleteProduct } from "../../Redux/Actions/productAction";
 
 function ProductsList({ prod }) {
+  const dispatch = useDispatch();
+
+  const handeDelete = (event) => {
+    if (window.confirm("Are you sure") == true) {
+      dispatch(deleteProduct(prod._id));
+    }
+  };
+
   return (
     <tbody class="bg-white">
       <tr class="hover:bg-gray-100 hover:shadow-lg">
@@ -23,7 +33,9 @@ function ProductsList({ prod }) {
         </td>
 
         <td class="px-6 py-4 whitespace-no-wrap border-b border-gray-200">
-          <div class="text-sm leading-5 text-gray-500"><span class="text-gray-700 font-medium">$</span> {prod.price}</div>
+          <div class="text-sm leading-5 text-gray-500">
+            <span class="text-gray-700 font-medium">$</span> {prod.price}
+          </div>
         </td>
 
         <td class="px-6 py-4 whitespace-no-wrap border-b border-gray-200">
@@ -33,12 +45,13 @@ function ProductsList({ prod }) {
         </td>
 
         <td class="px-6 py-4 text-sm leading-5 text-gray-500 whitespace-no-wrap border-b border-gray-200">
-        <svg
+          <svg
             xmlns="http://www.w3.org/2000/svg"
             class="cursor-pointer w-6 h-6 text-red-400"
             fill="none"
             viewBox="0 0 24 24"
             stroke="currentColor"
+            onClick={handeDelete}
           >
             <path
               stroke-linecap="round"
@@ -48,7 +61,11 @@ function ProductsList({ prod }) {
             />
           </svg>
         </td>
-        
+        <td class="px-6 py-4 whitespace-no-wrap border-b border-gray-200">
+          <span class="inline-flex px-2 text-xs font-semibold leading-5 text-green-800 bg-green-100 rounded-full">
+            
+          </span>
+        </td>
       </tr>
       <tr></tr>
     </tbody>

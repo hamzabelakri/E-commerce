@@ -1,6 +1,6 @@
-import { GET_ALL_PRODUCTS, GET_ONE_PRODUCT} from "../Types";
+import { GET_ALL_PRODUCTS, GET_ONE_PRODUCT, ADD_PRODUCT } from "../Types";
 
-const initState = {products: [], product: {}}
+const initState = { products: [], product: {} };
 const ProductReducer = (state = initState, action) => {
   switch (action.type) {
     case GET_ALL_PRODUCTS:
