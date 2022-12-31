@@ -9,6 +9,7 @@ import UserCard from "./UserCard";
 function AdminProfile() {
   const { users } = useSelector((state) => state.userReducer);
   const { messages } = useSelector((state) => state.messageReducer);
+  const { products } = useSelector((state) => state.productReducer);
   const dispatch = useDispatch();
   const getMessages = (event) => {
     dispatch(getAllMessages());
@@ -21,7 +22,7 @@ function AdminProfile() {
       <div class="md:flex items-center justify-center w-full px-4 py-2  lg:w-full">
         <div class=" mx-auto mt-8">
           <div class="grid gap-4 lg:grid-cols-3">
-            <div class="flex items-center px-4 py-6 bg-white rounded-md shadow-md">
+            <div class="flex items-center px-4 py-6 bg-white rounded-md shadow-md cursor-pointer">
               <div class="p-3 bg-indigo-600 rounded">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -46,7 +47,7 @@ function AdminProfile() {
               </div>
             </div>
             <div
-              class="flex items-center px-4 py-6 bg-white rounded-md shadow-md"
+              class="flex items-center px-4 py-6 bg-white rounded-md shadow-md cursor-pointer"
               onClick={getMessages}
             >
               <div class="p-3 bg-indigo-600 rounded">
@@ -68,11 +69,13 @@ function AdminProfile() {
                 </svg>
               </div>
               <div class="mx-4">
-                <h4 class="text-2xl font-semibold text-gray-700">30</h4>
+                <h4 class="text-2xl font-semibold text-gray-700">
+                  {messages.length}
+                </h4>
                 <div class="text-gray-500">Messages</div>
               </div>
             </div>
-            <div class="flex items-center px-4 py-6 bg-white rounded-md shadow-md">
+            <div class="flex items-center px-4 py-6 bg-white rounded-md shadow-md cursor-pointer">
               <div class="p-3 bg-indigo-600 rounded">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -90,7 +93,10 @@ function AdminProfile() {
                 </svg>
               </div>
               <div class="mx-4">
-                <h4 class="text-2xl font-semibold text-gray-700">1000</h4>
+                <h4 class="text-2xl font-semibold text-gray-700">
+                  {" "}
+                  {products.length}
+                </h4>
                 <div class="text-gray-500">Products</div>
               </div>
             </div>
@@ -243,5 +249,3 @@ export default AdminProfile;
     </div>
   </main>
   </> */
-
-
