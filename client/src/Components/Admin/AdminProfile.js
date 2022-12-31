@@ -2,8 +2,6 @@ import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { getAllUsers } from "../../Redux/Actions/userAction";
 import UserCard from "./UserCard";
-import Button from "react-bootstrap/Button";
-import Form from "react-bootstrap/Form";
 import { getAllMessages } from "../../Redux/Actions/messageAction";
 import MessageCard from "./MessageCard";
 function AdminProfile() {

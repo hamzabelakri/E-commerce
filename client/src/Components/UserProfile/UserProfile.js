@@ -5,12 +5,6 @@ function UserProfile() {
   const { user } = useSelector((state) => state.authReducer);
 
   return (
-    /*       <div >
-        <h1 >{user && user.username}</h1>
-    
-      <h3>{user && user.email}</h3>
-  </div> */
-
     <div class="mt-10 sm:mt-0">
       <div class="md:flex items-center justify-center">
         <div class="mt-5 md:col-span-2 md:mt-0">
