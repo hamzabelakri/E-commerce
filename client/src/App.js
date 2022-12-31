@@ -16,6 +16,7 @@ import Contact from "./Components/Contact/Contact";
 import Footer from "./Components/Footer/Footer";
 import NotFound from "./Components/NotFound/NotFound";
 import MessageCard from "./Components/Admin/MessageCard";
+import ProductsList from "./Components/Admin/ProductsList";
 function App() {
   return (
     <BrowserRouter>
@@ -31,6 +32,8 @@ function App() {
         <Route path="/user/:id" element={<UserDetails />} />
         <Route path="contact" element={<Contact />} />
         <Route path="messagecard" element={<MessageCard />} />
+        <Route path="productlist" element={<ProductsList />} />
+
         <Route path="*" element={<NotFound />} />
         
         <Route

@@ -44,7 +44,7 @@ function Login() {
         </div>
         <form class="mt-8 space-y-6" action="#" method="POST">
           <input type="hidden" name="remember" value="true" />
-          <div class="-space-y-px rounded-md shadow-sm">
+          <div class="-space-y-px rounded-md ">
             <div class="col-span-6 sm:col-span-3">
               <label
                 for="last-name"

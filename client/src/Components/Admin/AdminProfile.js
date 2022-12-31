@@ -6,6 +6,7 @@ import { getAllProducts } from "../../Redux/Actions/productAction";
 
 import MessageCard from "./MessageCard";
 import UserCard from "./UserCard";
+import ProductsList from "./ProductsList";
 
 function AdminProfile() {
   const { users } = useSelector((state) => state.userReducer);
@@ -107,6 +108,7 @@ function AdminProfile() {
               </div>
             </a>
           </div>
+          {/* users section */}
           <div class="flex flex-col mt-8 mb-8" id="users">
             <div class="py-2 -my-2 overflow-x-auto sm:-mx-6 sm:px-6 lg:-mx-8 lg:px-8">
               <div class="inline-block min-w-full overflow-hidden align-middle  bg-white shadow-md sm:rounded-lg">
@@ -137,6 +139,7 @@ function AdminProfile() {
               </div>
             </div>
           </div>
+          {/* messages section */}
           <div class="flex flex-col mt-8 mb-8" id="messages">
             <div class="py-2 -my-2 overflow-x-auto sm:-mx-6 sm:px-6 lg:-mx-8 lg:px-8">
               <div class="inline-block min-w-full overflow-hidden align-middle  bg-white shadow-md sm:rounded-lg">
@@ -160,6 +163,35 @@ function AdminProfile() {
                   </thead>
                   {messages.map((msg) => (
                     <MessageCard key={msg._id} msg={msg} />
+                  ))}
+                </table>
+              </div>
+            </div>
+          </div>
+          {/* products section */}
+          <div class="flex flex-col mt-8 mb-8" id="products">
+            <div class="py-2 -my-2 overflow-x-auto sm:-mx-6 sm:px-6 lg:-mx-8 lg:px-8">
+              <div class="inline-block min-w-full overflow-hidden align-middle  bg-white shadow-md sm:rounded-lg">
+                <table class="min-w-full">
+                  <thead>
+                    <tr>
+                      <th class="px-6 py-3 text-xs font-medium leading-4 tracking-wider text-left text-gray-500 uppercase border-b border-gray-200 bg-gray-50">
+                        Item
+                      </th>
+                      <th class="px-6 py-3 text-xs font-medium leading-4 tracking-wider text-left text-gray-500 uppercase border-b border-gray-200 bg-gray-50">
+                        Price
+                      </th>
+
+                      <th class="px-6 py-3 text-xs font-medium leading-4 tracking-wider text-left text-gray-500 uppercase border-b border-gray-200 bg-gray-50">
+                        In stock
+                      </th>
+                      <th class="px-6 py-3 text-xs font-medium leading-4 tracking-wider text-left text-gray-500 uppercase border-b border-gray-200 bg-gray-50">
+                        Delete
+                      </th>
+                    </tr>
+                  </thead>
+                  {products.map((prod) => (
+                    <ProductsList key={prod._id} prod={prod} />
                   ))}
                 </table>
               </div>

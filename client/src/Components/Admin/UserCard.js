@@ -8,15 +8,15 @@ function UserCard({ elt }) {
   const dispatch = useDispatch();
   const navigate = useNavigate();
   const { connected } = useSelector((state) => state.authReducer);
-  const { user } = useSelector((state) => state.userReducer);
+  const {user} = useSelector((state) => state.userReducer);
 
   const handleClick = (event) => {
     dispatch(getOneUser(elt._id, navigate));
   };
   const handleDelete = (event) => {
     if (window.confirm("Are you sure") == true) {
-      dispatch(deleteUser(elt._id));
-    }
+    dispatch(deleteUser(elt._id));
+  }
   };
   return (
     <tbody class="bg-white">
@@ -26,7 +26,7 @@ function UserCard({ elt }) {
             <div class="flex-shrink-0 w-10 h-10">
               <img
                 class="w-10 h-10 rounded-full"
-                src="https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=3&amp;h=750&amp;w=1260"
+                src="https://images.unsplash.com/photo-1570295999919-56ceb5ecca61?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8dXNlciUyMHByb2ZpbGV8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60"
                 alt="admin dashboard ui"
               />
             </div>
