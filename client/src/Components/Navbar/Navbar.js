@@ -1,15 +1,11 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import Container from "react-bootstrap/Container";
-import Nav from "react-bootstrap/Nav";
-import Navbar from "react-bootstrap/Navbar";
 import { useSelector, useDispatch } from "react-redux";
 import { useNavigate } from "react-router-dom";
 import { logOut } from "../../Redux/Actions/authAction";
 
 function CustomNavbar() {
   const [open, setOpen] = useState(false);
-
   const { connected } = useSelector((state) => state.authReducer);
   const dispatch = useDispatch();
   const navigate = useNavigate();

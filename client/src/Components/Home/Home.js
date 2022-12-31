@@ -17,7 +17,7 @@ function Home() {
   };
 
   return (
-    <div class="bg-white">
+    <div class="">
       <div class="mx-auto max-w-2xl py-12 px-4 sm:py-12 sm:px-6 lg:max-w-7xl lg:px-8">
         <div class="flex justify-between	">
           <h2 class="text-2xl font-bold tracking-tight text-gray-900">
