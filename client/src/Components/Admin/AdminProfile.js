@@ -4,6 +4,7 @@ import { getAllUsers } from "../../Redux/Actions/userAction";
 import { getAllMessages } from "../../Redux/Actions/messageAction";
 import { getAllProducts } from "../../Redux/Actions/productAction";
 import { Link } from "react-router-dom";
+import { ScrollToTop } from "../ScrollToTop/ScrollToTop";
 
 import MessageCard from "./MessageCard";
 import UserCard from "./UserCard";
@@ -218,6 +219,7 @@ function AdminProfile() {
           </div>
         </div>
       </div>
+      <ScrollToTop/>
     </div>
   );
 }
