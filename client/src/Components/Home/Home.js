@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { getAllProducts } from "../../Redux/Actions/productAction";
 import ProductCard from "../ProductCard/ProductCard";
+import { ScrollToTop } from "../ScrollToTop/ScrollToTop";
 
 function Home() {
   const { products } = useSelector((state) => state.productReducer);
@@ -58,6 +59,7 @@ function Home() {
           )}
         </div>
       </div>
+      <ScrollToTop/>
     </div>
   );
 }

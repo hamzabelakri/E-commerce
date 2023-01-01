@@ -18,6 +18,7 @@ import NotFound from "./Components/NotFound/NotFound";
 import MessageCard from "./Components/Admin/MessageCard";
 import ProductsList from "./Components/Admin/ProductsList";
 import NewProduct from "./Components/Admin/NewProduct";
+import { ScrollToTop } from "./Components/ScrollToTop/ScrollToTop";
 function App() {
   return (
     <BrowserRouter>
@@ -35,6 +36,7 @@ function App() {
         <Route path="messagecard" element={<MessageCard />} />
         <Route path="productlist" element={<ProductsList />} />
         <Route path="newproduct" element={<NewProduct />} />
+        <Route path="scroll" element={<ScrollToTop />} />
         <Route path="*" element={<NotFound />} />
         
         <Route
