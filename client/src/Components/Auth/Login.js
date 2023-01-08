@@ -34,7 +34,7 @@ function Login() {
               Sign in to your account
             </h2>
             <p class="mt-2 text-center text-sm text-gray-600">
-              Or
+              Or&nbsp;
               <button
                 href="#"
                 class="font-medium text-indigo-600 hover:text-indigo-500"

@@ -13,7 +13,7 @@ function ProductCard({ elt }) {
     show ? setShow(false) : setShow(true);
   };
   return (
-    <div class="group relative" onClick={handleClick}>
+    <div class="group relative cursor-pointer" onClick={handleClick}>
       {show && <ProductDetail setShow={setShow} />}
       <div class="min-h-80 aspect-w-1 aspect-h-1 w-full overflow-hidden rounded-md bg-gray-200 group-hover:opacity-75 lg:aspect-none lg:h-80">
         <img

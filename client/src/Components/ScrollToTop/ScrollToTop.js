@@ -34,7 +34,7 @@ export const ScrollToTop = () => {
         onClick={scrollToTop}
         class={`${
           isVisible
-            ? "bg-indigo-600 hover:bg-indigo-700 focus:ring-indigo-500 opacity-25 inline-flex items-center rounded-full p-3 text-white shadow-sm transition-opacity focus:outline-none focus:ring-2 focus:ring-offset-2"
+            ? "bg-[#a5b4fc] hover:bg-[#1e40af] focus:ring-indigo-500 opacity-50 inline-flex items-center rounded-full p-3 text-white shadow-sm transition-opacity focus:outline-none focus:ring-2 focus:ring-offset-2"
             : "hidden"
         }`}
       >
