@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { updateUser } from "../../Redux/Actions/userAction";
 
@@ -10,6 +10,9 @@ function UpdateModal({ setShow }) {
     email: "",
     password: "",
   });
+  useEffect(() => {
+    if (state.user) setNewUser(state.user);
+  }, [state]);
   const handleChange = (event) => {
     setNewUser({ ...newUser, [event.target.name]: event.target.value });
   };
