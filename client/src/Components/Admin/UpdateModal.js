@@ -19,6 +19,7 @@ function UpdateModal({ setShow }) {
   const handleUpdate = (event) => {
     event.preventDefault();
     dispatch(updateUser(state.user._id, newUser));
+    setShow(false);
   };
   return (
     <div
@@ -33,10 +34,17 @@ function UpdateModal({ setShow }) {
         <div class="flex min-h-full items-start justify-center p-4 text-center sm:items-center sm:p-0">
           <div class="relative transform overflow-hidden rounded-lg bg-white text-left shadow-xl transition-all sm:my-8 sm:w-full sm:max-w-lg">
             <div class="bg-white px-4 pt-5 pb-4 sm:p-6 sm:pb-4 -mt-5">
-              <div class="sm:flex sm:items-start">
-                
-               <div class="-space-y-px rounded-md w-full">
-                <div class="mt-2 col-span-6 sm:col-span-3">
+              <div class="">
+                <div class=" md:flex md:justify-center ">
+                  <h3
+                    class="sm:text-left text-lg font-medium leading-6 text-gray-900"
+                    id="modal-title"
+                  >
+                    Update Profile
+                  </h3>
+                </div>
+                <div class="-space-y-px rounded-md w-full">
+                  <div class="mt-4 col-span-6 sm:col-span-3">
                     <label
                       for="username"
                       class="block text-sm font-medium text-gray-700"
@@ -94,7 +102,7 @@ function UpdateModal({ setShow }) {
                 </div>
               </div>
             </div>
-            <div class="-mt-3 bg-gray-50 space-y-2 sm:space-y-0 px-4 py-3 sm:flex sm:flex-row-reverse sm:px-6">
+            <div class="-mt-1 bg-gray-50 space-y-2 sm:space-y-0 px-4 py-3 sm:flex sm:flex-row-reverse sm:px-6">
               <button
                 type="button"
                 class="inline-flex w-full justify-center rounded-md border border-transparent bg-indigo-600 px-4 py-2 text-base font-medium text-white shadow-sm hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-red-500 focus:ring-offset-2 sm:ml-3 sm:w-auto sm:text-sm"

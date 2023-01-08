@@ -33,7 +33,7 @@ export const updateUser = (id, newUser) => async (dispatch) => {
       newUser
     );
     dispatch({ type: UPDATE_USER, payload: response.data });
-
+    alert(response.data.msg)
     console.log(response.data);
   } catch (error) {
     console.log(error);
