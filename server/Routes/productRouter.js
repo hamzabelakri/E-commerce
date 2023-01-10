@@ -1,5 +1,7 @@
 const express = require("express");
 const router = express.Router();
+const isAuth=require('../Middleware/isAuth');
+const isAdmin=require('../Middleware/isAdmin')
 
 const {
   getAllProducts,

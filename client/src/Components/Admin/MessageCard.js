@@ -1,6 +1,6 @@
 import React from "react";
 import { useDispatch } from "react-redux";
-import { deleteMessage } from "../../Redux/Actions/messageAction";
+import { deleteMessage, getAllMessages } from "../../Redux/Actions/messageAction";
 
 function MessageCard({ msg }) {
   const dispatch = useDispatch();
@@ -8,6 +8,7 @@ function MessageCard({ msg }) {
   const handeDelete = (event) => {
     if (window.confirm("Are you sure") == true) {
       dispatch(deleteMessage(msg._id));
+      dispatch(getAllMessages);
     }
   };
   return (
