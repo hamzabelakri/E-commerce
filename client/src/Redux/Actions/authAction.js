@@ -10,6 +10,7 @@ export const signUp = (user, navigate) => async (dispatch) => {
 
     dispatch({ type: REGISTER, payload: response.data });
     navigate("/profile");
+    alert(response.data.msg);
     console.log(response.data);
   } catch (error) {
     console.log(error.response.data.errors);

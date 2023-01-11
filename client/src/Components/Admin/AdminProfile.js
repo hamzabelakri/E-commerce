@@ -19,13 +19,13 @@ function AdminProfile() {
 
   useEffect(() => {
     dispatch(getAllUsers());
-  }, [dispatch]);
+  }, [users]);
   useEffect(() => {
     dispatch(getAllMessages());
-  }, [dispatch]);
+  }, [messages]);
   useEffect(() => {
     dispatch(getAllProducts());
-  }, [dispatch]);
+  }, [products]);
 
   return (
     <div class="flex bg-gray-50">

@@ -1,7 +1,5 @@
-import React, { useState } from "react";
-
+import React, { useState, useEffect } from "react";
 import { useSelector } from "react-redux";
-
 import UpdateModal from "../Admin/UpdateModal";
 import DeleteModal from "./DeleteModal";
 
@@ -37,9 +35,9 @@ function UserDetails() {
               <span class="text-md text-gray-400"></span>
             </div>
 
-            <div class="px-16 text-center text-lg font-semibold text-gray-800">
-              <p>{state.user.username}</p>
-              <p>{state.user.email}</p>
+            <div class="px-16 text-left text-lg font-semibold text-gray-800">
+              <p>Name : {state.user.username}</p>
+              <p>Email : {state.user.email}</p>
             </div>
 
             <div class="px-16 mt-3 text-center"></div>
