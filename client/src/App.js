@@ -11,6 +11,7 @@ import UserProfile from "./Components/UserProfile/UserProfile";
 import UserCard from "./Components/Admin/UserCard";
 import UserDetails from "./Components/Admin/UserDetails";
 import PrivateRoute from "./Components/PrivateRoute/PrivateRoute";
+import AdminRoute from "./Components/AdminRoute/AdminRoute";
 import LandingPage from "./Components/LandingPage/LandingPage";
 import Contact from "./Components/Contact/Contact";
 import Footer from "./Components/Footer/Footer";
@@ -19,6 +20,7 @@ import MessageCard from "./Components/Admin/MessageCard";
 import ProductsList from "./Components/Admin/ProductsList";
 import NewProduct from "./Components/Admin/NewProduct";
 import { ScrollToTop } from "./Components/ScrollToTop/ScrollToTop";
+import NoAccess from "./Components/NoAccess/NoAccess";
 function App() {
   return (
     <BrowserRouter>
@@ -38,13 +40,14 @@ function App() {
         <Route path="newproduct" element={<NewProduct />} />
         <Route path="scroll" element={<ScrollToTop />} />
         <Route path="*" element={<NotFound />} />
+        <Route path="warning" element={<NoAccess />} />
         
         <Route
           path="/admin"
           element={
-            <PrivateRoute>
+            <AdminRoute>
               <AdminProfile />
-            </PrivateRoute>
+            </AdminRoute>
           }
         />
         <Route
