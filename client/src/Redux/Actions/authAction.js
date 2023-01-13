@@ -1,5 +1,6 @@
 import { REGISTER, LOGIN, LOG_OUT } from "../Types";
 import axios from "axios";
+import toast from "react-hot-toast";
 
 export const signUp = (user, navigate) => async (dispatch) => {
   try {
@@ -9,9 +10,17 @@ export const signUp = (user, navigate) => async (dispatch) => {
     );
 
     dispatch({ type: REGISTER, payload: response.data });
-    navigate("/profile");
-    alert(response.data.msg);
+
     console.log(response.data);
+    toast(response.data.msg, {
+      icon: "👏",
+      style: {
+        borderRadius: "10px",
+        background: "#333",
+        color: "#fff",
+      },
+    });
+    navigate("/profile");
   } catch (error) {
     console.log(error.response.data.errors);
     error.response.data.errors.map((err) => alert(err.msg));
@@ -25,13 +34,20 @@ export const signIn = (user, navigate) => async (dispatch) => {
       user
     );
     dispatch({ type: LOGIN, payload: response.data });
+    console.log(response);
     if (response.data.user.role === 1) {
       navigate("/admin");
     } else {
       navigate("/profile");
     }
-
-    alert(response.data.msg);
+    toast(response.data.msg, {
+      icon: "👏",
+      style: {
+        borderRadius: "10px",
+        background: "#333",
+        color: "#fff",
+      },
+    });
   } catch (error) {
     console.log(error.response.data.errors);
     error.response.data.errors.map((err) => alert(err.msg));

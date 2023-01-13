@@ -1,6 +1,10 @@
 import React from "react";
 import { useDispatch } from "react-redux";
-import { deleteMessage, getAllMessages } from "../../Redux/Actions/messageAction";
+import {
+  deleteMessage,
+  getAllMessages,
+} from "../../Redux/Actions/messageAction";
+
 
 function MessageCard({ msg }) {
   const dispatch = useDispatch();

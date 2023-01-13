@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import { useSelector } from "react-redux";
 import UpdateModal from "../Admin/UpdateModal";
 import DeleteModal from "./DeleteModal";
+import { Toaster } from "react-hot-toast";
 
 function UserDetails() {
   const state = useSelector((state) => state.userReducer);
@@ -18,6 +19,7 @@ function UserDetails() {
 
   return (
     <div class="py-12 h-fit	 bg-gray-300">
+      <Toaster position="top-center" reverseOrder={false} />
       <div class="max-w-md mx-auto bg-white rounded-xl shadow-md overflow-hidden md:max-w-md">
         <div class="md:flex">
           <div class="w-full p-2 py-10">

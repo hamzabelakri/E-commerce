@@ -5,6 +5,7 @@ import { getAllMessages } from "../../Redux/Actions/messageAction";
 import { getAllProducts } from "../../Redux/Actions/productAction";
 import { Link } from "react-router-dom";
 import { ScrollToTop } from "../ScrollToTop/ScrollToTop";
+import { Toaster } from "react-hot-toast";
 
 import MessageCard from "./MessageCard";
 import UserCard from "./UserCard";
@@ -29,6 +30,8 @@ function AdminProfile() {
 
   return (
     <div class="flex bg-gray-50">
+             <Toaster position="top-center" reverseOrder={false} />
+
       <div class="md:flex items-center justify-center w-full px-4 py-2  lg:w-full">
         <div class=" mx-auto mt-8">
           <div class="grid gap-4 lg:grid-cols-3">
@@ -165,9 +168,9 @@ function AdminProfile() {
                       </th>
                     </tr>
                   </thead>
-                  {messages.map((msg) => (
+                 {messages.map((msg) => (
                     <MessageCard key={msg._id} msg={msg} />
-                  ))}
+                  ))} 
                 </table>
               </div>
             </div>
@@ -193,20 +196,23 @@ function AdminProfile() {
                         Delete
                       </th>
                       <th class="px-6 py-3 text-xs font-medium leading-4 tracking-wider text-left text-gray-500 uppercase border-b border-gray-200 bg-gray-50">
-                      <Link to="/newproduct" > <svg
-                          xmlns="http://www.w3.org/2000/svg"
-                          fill="none"
-                          viewBox="0 0 24 24"
-                          stroke-width="1.5"
-                          stroke="currentColor"
-                          class="cursor-pointer w-4 h-4 text-gray-500"
-                        >
-                          <path
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                            d="M12 4.5v15m7.5-7.5h-15"
-                          />
-                        </svg></Link>
+                        <Link to="/newproduct">
+                          {" "}
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            fill="none"
+                            viewBox="0 0 24 24"
+                            stroke-width="1.5"
+                            stroke="currentColor"
+                            class="cursor-pointer w-4 h-4 text-gray-500"
+                          >
+                            <path
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                              d="M12 4.5v15m7.5-7.5h-15"
+                            />
+                          </svg>
+                        </Link>
                       </th>
                     </tr>
                   </thead>
@@ -219,7 +225,7 @@ function AdminProfile() {
           </div>
         </div>
       </div>
-      <ScrollToTop/>
+      <ScrollToTop />
     </div>
   );
 }

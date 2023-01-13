@@ -5,6 +5,8 @@ import {
   DELETE_USER,
 } from "../Types";
 import axios from "axios";
+import toast from "react-hot-toast";
+
 
 export const getAllUsers = () => async (dispatch) => {
   try {
@@ -33,7 +35,7 @@ export const updateUser = (id, newUser) => async (dispatch) => {
       newUser
     );
     dispatch({ type: UPDATE_USER, payload: response.data });
-    alert(response.data.msg)
+    toast.success(response.data.msg);
     console.log(response.data);
   } catch (error) {
     console.log(error);
@@ -45,7 +47,7 @@ export const deleteUser = (id, navigate) => async (dispatch) => {
     const response = await axios.delete(`http://localhost:5000/users/${id}`);
 
     dispatch({ type: DELETE_USER });
-    alert(response.data.msg)
+    toast.success(response.data.msg)
     navigate("/admin");
     console.log(response.data);
   } catch (error) {

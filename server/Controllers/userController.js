@@ -26,7 +26,7 @@ const updateUser = async (req, res) => {
     const newUser = await User.findByIdAndUpdate(id, newInput, { new: true });
     const users = await User.find();
 
-    res.status(200).json({ msg: `is updated to ${newUser.username}`, users });
+    res.status(200).json({ msg: "user has been updated", users });
   } catch (error) {
     res.status(400).json({ error: "failed to update the user" });
   }

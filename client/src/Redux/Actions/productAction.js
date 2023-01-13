@@ -1,4 +1,6 @@
 import axios from "axios";
+import toast from 'react-hot-toast';
+
 import {
   GET_ALL_PRODUCTS,
   GET_ONE_PRODUCT,
@@ -28,10 +30,10 @@ export const addProduct = (product) => async (dispatch) => {
   try {
     const response = await axios.post("http://localhost:5000/product", product);
     dispatch({ type: ADD_PRODUCT, payload: response.data });
-    alert(response.data.msg);
+    toast.success(response.data.msg);
   } catch (error) {
     console.log(error.response.data.error);
-   alert(error.response.data.error);
+    toast.error(error.response.data.error);
   }
 };
 
@@ -41,8 +43,10 @@ export const deleteProduct = (id) => async (dispatch) => {
 
     dispatch({ type: DELETE_PRODUCT });
     console.log(response.data);
-    alert(response.data.msg);
+    toast.success(response.data.msg);
   } catch (error) {
     console.log(error);
+    toast.error(error.response.data.error);
+
   }
 };

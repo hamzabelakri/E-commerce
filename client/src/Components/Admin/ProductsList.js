@@ -1,6 +1,7 @@
 import React from "react";
 import { useDispatch } from "react-redux";
 import { deleteProduct } from "../../Redux/Actions/productAction";
+import { Toaster } from "react-hot-toast";
 
 function ProductsList({ prod }) {
   const dispatch = useDispatch();
@@ -13,6 +14,7 @@ function ProductsList({ prod }) {
 
   return (
     <tbody class="bg-white">
+      <Toaster position="top-center" reverseOrder={false} />
       <tr class="hover:bg-gray-100 hover:shadow-lg">
         <td class="px-6 py-4 whitespace-no-wrap border-b border-gray-200">
           <div class="flex items-center">

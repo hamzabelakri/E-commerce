@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { useDispatch } from "react-redux";
 import { addProduct } from "../../Redux/Actions/productAction";
 import FileBase from "react-file-base64";
+import { Toaster } from "react-hot-toast";
 
 function NewProduct() {
   const dispatch = useDispatch();
@@ -31,7 +32,7 @@ function NewProduct() {
     <div
       class="flex min-h-full items-center justify-center py-12 px-4 sm:px-6 lg:px-8"
       onSubmit={onSubmit}
-    >
+    > <Toaster position="top-center" reverseOrder={false} />
       <div class="w-full max-w-md space-y-8">
         <div>
           <h2 class="mt-6 text-center text-3xl font-bold tracking-tight text-gray-900">
@@ -168,6 +169,7 @@ function NewProduct() {
             </button>
           </div>
         </form>
+       
       </div>
     </div>
   );

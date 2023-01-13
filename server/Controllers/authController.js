@@ -21,7 +21,7 @@ const SignUp = async (req, res) => {
         { username: user.username, email: user.email, id: user._id },
         process.env.KEY
       );
-      res.status(200).json({ msg: "saved sucessuffly " , user, token});
+      res.status(200).json({ msg: `welcome aboard ${user.username}` , user, token});
     
   } catch (error) {
     res.status(400).json({ msg: "failed to sign up" });

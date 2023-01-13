@@ -6,7 +6,8 @@ import { logOut } from "../../Redux/Actions/authAction";
 
 function CustomNavbar() {
   const [open, setOpen] = useState(false);
-  const { connected } = useSelector((state) => state.authReducer);
+  const { connected, user } = useSelector((state) => state.authReducer);
+
   const dispatch = useDispatch();
   const navigate = useNavigate();
   const handleDeconnect = (event) => {
@@ -71,13 +72,36 @@ function CustomNavbar() {
                     <div class="border-t border-gray-200 mb-2"></div>
 
                     {connected ? (
-                      <p
-                        href="#"
-                        class="cursor-pointer font-medium text-gray-900"
-                        onClick={handleDeconnect}
-                      >
-                        Log out
-                      </p>
+                      <div>
+                        {user.role == 1 ? (
+                          <p href="#" class="font-medium ">
+                            <Link
+                              to="/admin"
+                              class="no-underline  bg-indigo-600 hover:bg-indigo-700 text-white  px-1 py-1 rounded-md"
+                            >
+                              Dashboard
+                            </Link>
+                          </p>
+                        ) : (
+                          <p href="#" class="font-medium ">
+                            <Link
+                              to="/profile"
+                              class="no-underline bg-indigo-600 hover:bg-indigo-700 text-white  px-1 py-1 rounded-md"
+                            >
+                              Profile
+                            </Link>
+                          </p>
+                        )}
+                        <>
+                          <p
+                            href="#"
+                            class="cursor-pointer font-medium text-gray-900"
+                            onClick={handleDeconnect}
+                          >
+                            Log out
+                          </p>
+                        </>
+                      </div>
                     ) : (
                       <p href="#" class="font-medium ">
                         <Link to="/login" class="no-underline text-gray-900">
@@ -160,13 +184,34 @@ function CustomNavbar() {
             <div class="ml-auto flex items-center">
               <div class="hidden md:flex md:flex-1 md:items-center md:justify-end md:space-x-6">
                 {connected ? (
-                  <a
-                    href="#"
-                    class="no-underline text-sm font-medium text-gray-700 hover:text-gray-800"
-                    onClick={handleDeconnect}
-                  >
-                    Log out
-                  </a>
+                  <div class="space-x-6">
+                    {user.role == 1 ? (
+                      <a href="#" class="no-underline ">
+                        <Link
+                          to="/admin"
+                          class="no-underline text-sm font-medium bg-indigo-600 hover:bg-indigo-700 text-white  px-3 py-2 rounded-md"
+                        >
+                          Dashboard
+                        </Link>
+                      </a>
+                    ) : (
+                      <a href="#" class="no-underline ">
+                        <Link
+                          to="/profile"
+                          class="no-underline text-sm font-medium bg-indigo-600 hover:bg-indigo-700 text-white  px-3 py-2 rounded-md"
+                        >
+                          Profile
+                        </Link>
+                      </a>
+                    )}
+                    <a
+                      href="#"
+                      class="no-underline text-sm font-medium text-gray-700 hover:text-gray-800"
+                      onClick={handleDeconnect}
+                    >
+                      Log out
+                    </a>
+                  </div>
                 ) : (
                   <a href="#" class="no-underline ">
                     <Link
