@@ -7,8 +7,7 @@ function UserProfile() {
 
   return (
     <div class="mt-10 sm:mt-0">
-                   <Toaster position="top-center" reverseOrder={false} />
-
+      <Toaster position="top-center" reverseOrder={false} />
       <div class="md:flex items-center justify-center">
         <div class="mt-5 md:col-span-2 md:mt-0">
           <div class="px-4 sm:px-0">

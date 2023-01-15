@@ -20,7 +20,7 @@ function ProductsList({ prod }) {
           <div class="flex items-center">
             <div class="flex-shrink-0 w-10 h-10">
               <img
-                class="w-10 h-10 rounded-full"
+                class="w-full h-full object-cover rounded-full"
                 src={prod.imageUrl}
                 alt="admin dashboard ui"
               />

@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { useDispatch } from "react-redux";
 import { signUp } from "../../Redux/Actions/authAction";
 import { useNavigate } from "react-router-dom";
+import { Toaster } from "react-hot-toast";
 
 function Sign() {
   const dispatch = useDispatch();
@@ -24,6 +25,8 @@ function Sign() {
 
   return (
     <div class="min-h-screen">
+            <Toaster position="top-center" reverseOrder={false} />
+
       <div
         class="flex min-h-full items-center justify-center py-12 px-4 sm:px-6 lg:px-8"
         onSubmit={onSubmit}

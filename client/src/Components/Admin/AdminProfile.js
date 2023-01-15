@@ -30,8 +30,7 @@ function AdminProfile() {
 
   return (
     <div class="flex bg-gray-50">
-             <Toaster position="top-center" reverseOrder={false} />
-
+      <Toaster position="top-center" reverseOrder={false} />
       <div class="md:flex items-center justify-center w-full px-4 py-2  lg:w-full">
         <div class=" mx-auto mt-8">
           <div class="grid gap-4 lg:grid-cols-3">
@@ -168,9 +167,9 @@ function AdminProfile() {
                       </th>
                     </tr>
                   </thead>
-                 {messages.map((msg) => (
+                  {messages.map((msg) => (
                     <MessageCard key={msg._id} msg={msg} />
-                  ))} 
+                  ))}
                 </table>
               </div>
             </div>

@@ -23,7 +23,7 @@ export const signUp = (user, navigate) => async (dispatch) => {
     navigate("/profile");
   } catch (error) {
     console.log(error.response.data.errors);
-    error.response.data.errors.map((err) => alert(err.msg));
+    error.response.data.errors.map((err) => toast.error(err.msg));
   }
 };
 
@@ -50,7 +50,7 @@ export const signIn = (user, navigate) => async (dispatch) => {
     });
   } catch (error) {
     console.log(error.response.data.errors);
-    error.response.data.errors.map((err) => alert(err.msg));
+    error.response.data.errors.map((err) => toast.error(err.msg));
   }
 };
 
