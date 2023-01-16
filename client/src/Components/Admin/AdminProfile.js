@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { getAllUsers } from "../../Redux/Actions/userAction";
 import { getAllMessages } from "../../Redux/Actions/messageAction";
@@ -15,6 +15,7 @@ function AdminProfile() {
   const { users } = useSelector((state) => state.userReducer);
   const { messages } = useSelector((state) => state.messageReducer);
   const { products } = useSelector((state) => state.productReducer);
+  const [selectedSection, setSelectedSection] = useState("section1");
 
   const dispatch = useDispatch();
 
@@ -35,7 +36,10 @@ function AdminProfile() {
         <div class=" mx-auto mt-8">
           <div class="grid gap-4 lg:grid-cols-3">
             <a href="#users" class="no-underline bg-white">
-              <div class="flex items-center px-4 py-6  hover:bg-gray-100 hover:shadow-lg	 rounded-md shadow-md cursor-pointer">
+              <div
+                class="flex items-center px-4 py-6  hover:bg-gray-100 hover:shadow-lg	 rounded-md shadow-md cursor-pointer"
+                onClick={() => setSelectedSection("section1")}
+              >
                 <div class="p-3 bg-indigo-600 rounded">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -61,7 +65,10 @@ function AdminProfile() {
               </div>
             </a>
             <a href="#messages" class="no-underline bg-white">
-              <div class="flex items-center px-4 py-6 	 hover:bg-gray-100 hover:shadow-lg	 rounded-md shadow-md cursor-pointer">
+              <div
+                class="flex items-center px-4 py-6 	 hover:bg-gray-100 hover:shadow-lg	 rounded-md shadow-md cursor-pointer"
+                onClick={() => setSelectedSection("section2")}
+              >
                 <div class="p-3 bg-indigo-600 rounded">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -87,7 +94,10 @@ function AdminProfile() {
               </div>
             </a>
             <a href="#products" class="no-underline bg-white">
-              <div class="flex items-center px-4 py-6  hover:bg-gray-100 hover:shadow-lg rounded-md shadow-md cursor-pointer">
+              <div
+                class="flex items-center px-4 py-6  hover:bg-gray-100 hover:shadow-lg rounded-md shadow-md cursor-pointer"
+                onClick={() => setSelectedSection("section3")}
+              >
                 <div class="p-3 bg-indigo-600 rounded">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -115,113 +125,119 @@ function AdminProfile() {
             </a>
           </div>
           {/* users section */}
-          <div class="flex flex-col mt-8 mb-8" id="users">
-            <div class="py-2 -my-2 overflow-x-auto sm:-mx-6 sm:px-6 lg:-mx-8 lg:px-8">
-              <div class="inline-block min-w-full overflow-hidden align-middle  bg-white shadow-md sm:rounded-lg">
-                <table class="min-w-full">
-                  <thead>
-                    <tr>
-                      <th class="px-6 py-3 text-xs font-medium leading-4 tracking-wider text-left text-gray-500 uppercase border-b border-gray-200 bg-gray-50">
-                        Name
-                      </th>
-                      <th class="px-6 py-3 text-xs font-medium leading-4 tracking-wider text-left text-gray-500 uppercase border-b border-gray-200 bg-gray-50">
-                        Email
-                      </th>
-                      <th class="px-6 py-3 text-xs font-medium leading-4 tracking-wider text-left text-gray-500 uppercase border-b border-gray-200 bg-gray-50">
-                        Status
-                      </th>
-                      <th class="px-6 py-3 text-xs font-medium leading-4 tracking-wider text-left text-gray-500 uppercase border-b border-gray-200 bg-gray-50">
-                        Edit
-                      </th>
-                      <th class="px-6 py-3 text-xs font-medium leading-4 tracking-wider text-left text-gray-500 uppercase border-b border-gray-200 bg-gray-50">
-                        Delete
-                      </th>
-                    </tr>
-                  </thead>
-                  {users.map((elt) => (
-                    <UserCard key={elt._id} elt={elt} />
-                  ))}
-                </table>
+          {selectedSection === "section1" ? (
+            <div class="flex flex-col mt-8 mb-8">
+              <div class="py-2 -my-2 overflow-x-auto sm:-mx-6 sm:px-6 lg:-mx-8 lg:px-8">
+                <div class="inline-block min-w-full overflow-hidden align-middle  bg-white shadow-md sm:rounded-lg">
+                  <table class="min-w-full">
+                    <thead>
+                      <tr>
+                        <th class="px-6 py-3 text-xs font-medium leading-4 tracking-wider text-left text-gray-500 uppercase border-b border-gray-200 bg-gray-50">
+                          Name
+                        </th>
+                        <th class="px-6 py-3 text-xs font-medium leading-4 tracking-wider text-left text-gray-500 uppercase border-b border-gray-200 bg-gray-50">
+                          Email
+                        </th>
+                        <th class="px-6 py-3 text-xs font-medium leading-4 tracking-wider text-left text-gray-500 uppercase border-b border-gray-200 bg-gray-50">
+                          Status
+                        </th>
+                        <th class="px-6 py-3 text-xs font-medium leading-4 tracking-wider text-left text-gray-500 uppercase border-b border-gray-200 bg-gray-50">
+                          Edit
+                        </th>
+                        <th class="px-6 py-3 text-xs font-medium leading-4 tracking-wider text-left text-gray-500 uppercase border-b border-gray-200 bg-gray-50">
+                          Delete
+                        </th>
+                      </tr>
+                    </thead>
+                    {users.map((elt) => (
+                      <UserCard key={elt._id} elt={elt} />
+                    ))}
+                  </table>
+                </div>
               </div>
             </div>
-          </div>
+          ) : null}
           {/* messages section */}
-          <div class="flex flex-col mt-8 mb-8" id="messages">
-            <div class="py-2 -my-2 overflow-x-auto sm:-mx-6 sm:px-6 lg:-mx-8 lg:px-8">
-              <div class="inline-block min-w-full overflow-hidden align-middle  bg-white shadow-md sm:rounded-lg">
-                <table class="min-w-full">
-                  <thead>
-                    <tr>
-                      <th class="px-6 py-3 text-xs font-medium leading-4 tracking-wider text-left text-gray-500 uppercase border-b border-gray-200 bg-gray-50">
-                        Name
-                      </th>
-                      <th class="px-6 py-3 text-xs font-medium leading-4 tracking-wider text-left text-gray-500 uppercase border-b border-gray-200 bg-gray-50">
-                        Email
-                      </th>
+          {selectedSection === "section2" ? (
+            <div class="flex flex-col mt-8 mb-8">
+              <div class="py-2 -my-2 overflow-x-auto sm:-mx-6 sm:px-6 lg:-mx-8 lg:px-8">
+                <div class="inline-block min-w-full overflow-hidden align-middle  bg-white shadow-md sm:rounded-lg">
+                  <table class="min-w-full">
+                    <thead>
+                      <tr>
+                        <th class="px-6 py-3 text-xs font-medium leading-4 tracking-wider text-left text-gray-500 uppercase border-b border-gray-200 bg-gray-50">
+                          Name
+                        </th>
+                        <th class="px-6 py-3 text-xs font-medium leading-4 tracking-wider text-left text-gray-500 uppercase border-b border-gray-200 bg-gray-50">
+                          Email
+                        </th>
 
-                      <th class="px-6 py-3 text-xs font-medium leading-4 tracking-wider text-left text-gray-500 uppercase border-b border-gray-200 bg-gray-50">
-                        Message
-                      </th>
-                      <th class="px-6 py-3 text-xs font-medium leading-4 tracking-wider text-left text-gray-500 uppercase border-b border-gray-200 bg-gray-50">
-                        Delete
-                      </th>
-                    </tr>
-                  </thead>
-                  {messages.map((msg) => (
-                    <MessageCard key={msg._id} msg={msg} />
-                  ))}
-                </table>
+                        <th class="px-6 py-3 text-xs font-medium leading-4 tracking-wider text-left text-gray-500 uppercase border-b border-gray-200 bg-gray-50">
+                          Message
+                        </th>
+                        <th class="px-6 py-3 text-xs font-medium leading-4 tracking-wider text-left text-gray-500 uppercase border-b border-gray-200 bg-gray-50">
+                          Delete
+                        </th>
+                      </tr>
+                    </thead>
+                    {messages.map((msg) => (
+                      <MessageCard key={msg._id} msg={msg} />
+                    ))}
+                  </table>
+                </div>
               </div>
             </div>
-          </div>
+          ) : null}
           {/* products section */}
-          <div class="flex flex-col mt-8 mb-8" id="products">
-            <div class="py-2 -my-2 overflow-x-auto sm:-mx-6 sm:px-6 lg:-mx-8 lg:px-8">
-              <div class="inline-block min-w-full overflow-hidden align-middle  bg-white shadow-md sm:rounded-lg">
-                <table class="min-w-full">
-                  <thead>
-                    <tr>
-                      <th class="px-6 py-3 text-xs font-medium leading-4 tracking-wider text-left text-gray-500 uppercase border-b border-gray-200 bg-gray-50">
-                        Item
-                      </th>
-                      <th class="px-6 py-3 text-xs font-medium leading-4 tracking-wider text-left text-gray-500 uppercase border-b border-gray-200 bg-gray-50">
-                        Price
-                      </th>
+          {selectedSection === "section3" ? (
+            <div class="flex flex-col mt-8 mb-8">
+              <div class="py-2 -my-2 overflow-x-auto sm:-mx-6 sm:px-6 lg:-mx-8 lg:px-8">
+                <div class="inline-block min-w-full overflow-hidden align-middle  bg-white shadow-md sm:rounded-lg">
+                  <table class="min-w-full">
+                    <thead>
+                      <tr>
+                        <th class="px-6 py-3 text-xs font-medium leading-4 tracking-wider text-left text-gray-500 uppercase border-b border-gray-200 bg-gray-50">
+                          Item
+                        </th>
+                        <th class="px-6 py-3 text-xs font-medium leading-4 tracking-wider text-left text-gray-500 uppercase border-b border-gray-200 bg-gray-50">
+                          Price
+                        </th>
 
-                      <th class="px-6 py-3 text-xs font-medium leading-4 tracking-wider text-left text-gray-500 uppercase border-b border-gray-200 bg-gray-50">
-                        In stock
-                      </th>
-                      <th class="px-6 py-3 text-xs font-medium leading-4 tracking-wider text-left text-gray-500 uppercase border-b border-gray-200 bg-gray-50">
-                        Delete
-                      </th>
-                      <th class="px-6 py-3 text-xs font-medium leading-4 tracking-wider text-left text-gray-500 uppercase border-b border-gray-200 bg-gray-50">
-                        <Link to="/newproduct">
-                          {" "}
-                          <svg
-                            xmlns="http://www.w3.org/2000/svg"
-                            fill="none"
-                            viewBox="0 0 24 24"
-                            stroke-width="1.5"
-                            stroke="currentColor"
-                            class="cursor-pointer w-4 h-4 text-gray-500"
-                          >
-                            <path
-                              stroke-linecap="round"
-                              stroke-linejoin="round"
-                              d="M12 4.5v15m7.5-7.5h-15"
-                            />
-                          </svg>
-                        </Link>
-                      </th>
-                    </tr>
-                  </thead>
-                  {products.map((prod) => (
-                    <ProductsList key={prod._id} prod={prod} />
-                  ))}
-                </table>
+                        <th class="px-6 py-3 text-xs font-medium leading-4 tracking-wider text-left text-gray-500 uppercase border-b border-gray-200 bg-gray-50">
+                          In stock
+                        </th>
+                        <th class="px-6 py-3 text-xs font-medium leading-4 tracking-wider text-left text-gray-500 uppercase border-b border-gray-200 bg-gray-50">
+                          Delete
+                        </th>
+                        <th class="px-6 py-3 text-xs font-medium leading-4 tracking-wider text-left text-gray-500 uppercase border-b border-gray-200 bg-gray-50">
+                          <Link to="/newproduct">
+                            {" "}
+                            <svg
+                              xmlns="http://www.w3.org/2000/svg"
+                              fill="none"
+                              viewBox="0 0 24 24"
+                              stroke-width="1.5"
+                              stroke="currentColor"
+                              class="cursor-pointer w-4 h-4 text-gray-500"
+                            >
+                              <path
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                d="M12 4.5v15m7.5-7.5h-15"
+                              />
+                            </svg>
+                          </Link>
+                        </th>
+                      </tr>
+                    </thead>
+                    {products.map((prod) => (
+                      <ProductsList key={prod._id} prod={prod} />
+                    ))}
+                  </table>
+                </div>
               </div>
             </div>
-          </div>
+          ) : null}
         </div>
       </div>
       <ScrollToTop />

@@ -17,3 +17,6 @@ export const DELETE_USER = "DELETE_USER";
 export const Post_Message = "Post_Message";
 export const GET_ALL_MESSAGES = "GET_ALL_MESSAGES";
 export const DELETE_MESSAGE = "DELETE_MESSAGE"
+////cart
+export const ADD_ITEM = "ADD_ITEM";
+

@@ -1,14 +1,20 @@
 import React from "react";
 import { useSelector, useDispatch } from "react-redux";
+import { addItem  } from "../../Redux/Actions/cartAction";
 
 function ProductDetail({ setShow }) {
+  const dispatch = useDispatch();
   const { product } = useSelector((state) => state.productReducer);
-  console.log(product);
 
   const handleShow = (event) => {
     setShow(false);
   };
 
+  const handleAddToCart = (event) => {
+    dispatch(addItem (product));
+ 
+
+  };
   return (
     <div class="relative z-10" role="dialog" aria-modal="true">
       <div class="fixed inset-0 hidden bg-gray-500 bg-opacity-75 transition-opacity md:block"></div>
@@ -70,6 +76,7 @@ function ProductDetail({ setShow }) {
                       <button
                         type="submit"
                         class="mt-6 flex w-full items-center justify-center rounded-md border border-transparent bg-indigo-600 py-3 px-8 text-base font-medium text-white hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2"
+                        onClick={handleAddToCart}
                       >
                         Add to cart
                       </button>
