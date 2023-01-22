@@ -4,7 +4,7 @@ import toast from "react-hot-toast";
 
 export const sendMessage = (message) => async (dispatch) => {
   try {
-    const response = await axios.post("http://localhost:5000/message", message);
+    const response = await axios.post("https://e-commerce-1pvm.onrender.com/message", message);
 
     dispatch({ type: Post_Message, payload: response.data });
 
@@ -18,7 +18,7 @@ export const sendMessage = (message) => async (dispatch) => {
 
 export const getAllMessages = () => async (dispatch) => {
   try {
-    const response = await axios.get("http://localhost:5000/message");
+    const response = await axios.get("https://e-commerce-1pvm.onrender.com/message");
 
     dispatch({ type: GET_ALL_MESSAGES, payload: response.data });
   } catch (error) {
@@ -28,7 +28,7 @@ export const getAllMessages = () => async (dispatch) => {
 
 export const deleteMessage = (id) => async (dispatch) => {
   try {
-    const response = await axios.delete(`http://localhost:5000/message/${id}`);
+    const response = await axios.delete(`https://e-commerce-1pvm.onrender.com/message/${id}`);
 
     dispatch({ type: DELETE_MESSAGE, payload: response.data });
     console.log(response.data);

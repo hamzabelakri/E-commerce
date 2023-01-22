@@ -10,7 +10,7 @@ import toast from "react-hot-toast";
 
 export const getAllUsers = () => async (dispatch) => {
   try {
-    const response = await axios.get("http://localhost:5000/users");
+    const response = await axios.get("https://e-commerce-1pvm.onrender.com/users");
 
     dispatch({ type: GET_ALL_USERS, payload: response.data });
   } catch (error) {
@@ -20,7 +20,7 @@ export const getAllUsers = () => async (dispatch) => {
 
 export const getOneUser = (id, navigate) => async (dispatch) => {
   try {
-    const response = await axios.get(`http://localhost:5000/users/${id}`);
+    const response = await axios.get(`https://e-commerce-1pvm.onrender.com/users/${id}`);
     dispatch({ type: GET_ONE_USER, payload: response.data });
     navigate(`/user/${id}`);
   } catch (error) {
@@ -31,7 +31,7 @@ export const getOneUser = (id, navigate) => async (dispatch) => {
 export const updateUser = (id, newUser) => async (dispatch) => {
   try {
     const response = await axios.put(
-      `http://localhost:5000/users/${id}`,
+      `https://e-commerce-1pvm.onrender.com/users/${id}`,
       newUser
     );
     dispatch({ type: UPDATE_USER, payload: response.data });
@@ -44,7 +44,7 @@ export const updateUser = (id, newUser) => async (dispatch) => {
 
 export const deleteUser = (id, navigate) => async (dispatch) => {
   try {
-    const response = await axios.delete(`http://localhost:5000/users/${id}`);
+    const response = await axios.delete(`https://e-commerce-1pvm.onrender.com/users/${id}`);
 
     dispatch({ type: DELETE_USER });
     toast.success(response.data.msg)
