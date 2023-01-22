@@ -5,7 +5,7 @@ import toast from "react-hot-toast";
 export const signUp = (user, navigate) => async (dispatch) => {
   try {
     const response = await axios.post(
-      "e-commerce-production-66b6.up.railway.app/auth/sign-up",
+      "https://e-commerce-1pvm.onrender.com/auth/sign-up",
       user
     );
 
@@ -30,7 +30,7 @@ export const signUp = (user, navigate) => async (dispatch) => {
 export const signIn = (user, navigate) => async (dispatch) => {
   try {
     const response = await axios.post(
-      "e-commerce-production-66b6.up.railway.app/auth/sign-in",
+      "https://e-commerce-1pvm.onrender.com/auth/sign-in",
       user
     );
     dispatch({ type: LOGIN, payload: response.data });
