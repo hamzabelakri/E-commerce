@@ -43,11 +43,11 @@ const SignIn = async (req, res) => {
       const result = await bcrypt.compare(userInfo.password,user.password);
       if (result==true) {
     
-     /*    const token = jwt.sign(
+        const token = jwt.sign(
           { username: user.username, email: user.email, id: user._id },
           process.env.KEY
-        ); */
-        res.status(200).json({ msg: `welcome back ${user.username}`, user });
+        );
+        res.status(200).json({ msg: `welcome back ${user.username}`, user, token });
       } else {
         res.status(401).json({ errors: [{ msg: "wrong password" }] });
       }
