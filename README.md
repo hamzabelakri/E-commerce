@@ -1,4 +1,4 @@
-A simple Full Stack MERN e-commerce project designed using Tailwind CSS framework.
+A Full Stack MERN e-commerce project designed using Tailwind CSS framework.
 
 The app is still in progress..
 
