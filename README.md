@@ -2,7 +2,7 @@ A simple Full Stack MERN e-commerce project designed using Tailwind CSS framewor
 
 The app is still in progress..
 
-# Deployment
+## Deployment
 
 - **Backend**: The backend of this project is deployed on Render: https://e-commerce-1pvm.onrender.com
 
