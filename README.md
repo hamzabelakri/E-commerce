@@ -4,8 +4,8 @@ The app is still in progress..
 
 ## Deployment
 
-- **Backend**: The backend of this project is deployed on Render: https://e-commerce-1pvm.onrender.com
+The backend is deployed on Render and the frontend on Netlify
 
-- **Frontend**: The frontend of this project is deployed on Netlify: https://shopify-tn.netlify.app/
+The project's website: https://shopify-tn.netlify.app/
 
 
