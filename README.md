@@ -2,5 +2,10 @@ A simple Full Stack MERN e-commerce project designed using Tailwind CSS framewor
 
 The app is still in progress..
 
-Admin dashboard demo :
-https://drive.google.com/file/d/1iuxM9n-Qmq6GIgNK9somO5BzC25Fi5MS/view?usp=sharing
+## Deployment
+
+- **Backend**: The backend of this project is deployed on Render: https://e-commerce-1pvm.onrender.com
+
+- **Frontend**: The frontend of this project is deployed on Netlify: https://shopify-tn.netlify.app/
+
+
